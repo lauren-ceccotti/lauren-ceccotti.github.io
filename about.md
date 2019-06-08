@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About
+title: about
 ---
 <h1>{{ "About Me!" | uppercase }}</h1>
 
