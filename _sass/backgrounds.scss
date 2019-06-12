@@ -1,0 +1,21 @@
+body{
+
+    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, #C06C84, #6C5B7B, #355C7D, #00b09b, #96c93d, #F3F9A7, orange);
+    transition: all, 2s;
+
+
+    &.home{
+        background-size: 100% 100%;
+        background-position: 0% 30%;
+    }
+    &.about{
+        background-size: 100% 250%;
+        background-position: 0 70%;
+    }
+    // &:hover{
+    //     background-size: 100% 200%;
+    //     background-repeat: no-repeat;
+    //     background-position: 0 30%;
+    // }
+}

@@ -1,7 +1,19 @@
+body { background-repeat: no-repeat; background: linear-gradient(to bottom, #C06C84, #6C5B7B, #355C7D, #00b09b, #96c93d, #F3F9A7, orange); transition: all, 2s; }
+body.home { background-size: 100% 100%; background-position: 0% 30%; }
+body.about { background-size: 100% 250%; background-position: 0 70%; }
+
+* { box-sizing: border-box; }
+
+body, html { height: 100%; margin: 0; }
+
+body { font-family: "Futura", "sans-serif"; }
+
+.bg { width: 100%; height: 100%; position: absolute; background-image: linear-gradient(#EC4056, #DAF100, #64E1E7, #994AFC); }
+
+.page { position: absolute; top: 10px; bottom: 10px; left: 10px; right: 10px; }
+
+.trapezoid { border-bottom: 50px solid #FFF; border-left: 50px solid transparent; height: 0; width: 100%; }
+
+.main { background: #FFF; padding: 50px; position: absolute; width: 100%; top: 50px; bottom: 0; }
+
 .current { color: green; }
-
-html, body { height: 100%; }
-
-body { transition: all, 2500ms; background-repeat: no-repeat; background: linear-gradient(to bottom, #C06C84, #6C5B7B, #355C7D, #00b09b, #96c93d, #F3F9A7, orange); }
-body.home { background-size: 100% 100%; background-position: 0% 0%; }
-body.about { background-size: 100% 250%; background-repeat: no-repeat; background-position: 0 70%; }
