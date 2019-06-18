@@ -1,8 +1,4 @@
 
-.logo{
-    display: block;
-}
-
 .menu-home{
     nav{
         position: absolute;
@@ -36,16 +32,30 @@
 
 
 
-nav.main-nav{
+.main-nav{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
     position: fixed;
-    top: 20px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    border-radius: 60px;
-    overflow: hidden;
+    top: $border;
+    right: $border;
+    padding: 40px;
     z-index: 99;
+    //background: $page-color;
+    a{
+        margin: 25px 0;
+    }
 }
+.nav-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    overflow: hidden;
+    height: 0;
+}
+
 
 
 

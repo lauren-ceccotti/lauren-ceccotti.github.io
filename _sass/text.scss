@@ -33,6 +33,12 @@ nav{
     a:hover, .current {
         opacity: 0.3;
     }
+    &.main-nav{
+        a{
+            font-size: 22px;
+            letter-spacing: 3px;
+        }
+    }
 }
 
 p{

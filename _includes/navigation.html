@@ -1,8 +1,11 @@
 <nav class="main-nav">
-    {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" class="{{ item.name }} {% if page.url == item.link %}current{% endif %}" >
-        {{ item.name | capitalize }}
-    </a>
-    {% endfor %}
-    <img class="logo" src="assets/images/logo-color.svg" alt="">
+    <div class="nav-items">
+        {% for item in site.data.navigation %}
+        <a href="{{ item.link }}" class="{{ item.name }} {% if page.url == item.link %}current{% endif %}" >
+            {{ item.name | capitalize }}
+        </a>
+        {% endfor %}
+    </div>
+    {% include logo.html %}
+    <!-- <img class="logo" src="assets/images/logo-color.svg" alt=""> -->
 </nav>

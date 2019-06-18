@@ -1,0 +1,29 @@
+
+#logo{
+    display: block;
+    width: 40px;
+    .st0, .st1, .st2, .st3{
+        fill:none;
+        stroke-width:15;
+        stroke-linejoin:round;
+        stroke-miterlimit:10;
+    }
+    .st0{
+        stroke:$yellow;
+    }
+    .st1{
+        stroke:$purple;
+    }
+    .st2{
+        stroke:$red;
+    }
+    .st3{
+        stroke:$turquoise;
+    }
+}
+
+
+
+.logo{
+    display: block;
+}
