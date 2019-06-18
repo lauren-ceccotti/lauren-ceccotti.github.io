@@ -112,26 +112,33 @@ h1, h2, h3, h4, h5 { font-family: futura-pt-bold, sans-serif; }
 
 h1 { font-size: 74px; font-weight: bold; letter-spacing: 5px; margin-bottom: 6vh; }
 
+h2 { font-size: 55px; font-weight: bold; letter-spacing: 5px; }
+
 nav a { opacity: 1; transition: all, 0.5s; font-size: 24px; letter-spacing: 2px; }
 nav a:hover, nav .current { opacity: 0.3; }
 
 p { font-size: 17px; letter-spacing: 2px; line-height: 24px; }
 
 @media all and (max-width: 1023px) { body h1 { font-size: 60px; }
+  body h2 { font-size: 43px; letter-spacing: 3px; }
   body nav a { font-size: 20px; }
   body p { font-size: 15px; letter-spacing: 2px; line-height: 24px; } }
 body { background-repeat: no-repeat; background-attachment: fixed; }
 body.home { background-image: linear-gradient(to bottom, #994AFC, #64E1E7, #DAF100, #EC4056); }
 body.projects, body.project { background-image: linear-gradient(#64E1E7, #74B1ED, #8580F4, #994AFC); }
+body.projects .losange, body.projects .fancy-line, body.project .losange, body.project .fancy-line { background: #64E1E7; }
 body.skills { background-image: linear-gradient(#994AFC, #B446C4, #D0438D, #EC4056); }
+body.skills .losange, body.skills .fancy-line { background: #994AFC; }
 body.about { background-image: linear-gradient(#DAF100, #B3EB4B, #87E5A2, #64E1E7); }
+body.about .losange, body.about .fancy-line { background: #DAF100; }
 body.contact { background-image: linear-gradient(#EC4056, #E48434, #DEC117, #DAF100); }
+body.contact .losange, body.contact .fancy-line { background: #EC4056; }
 
 * { box-sizing: border-box; }
 
 body, html { height: 100%; margin: 0; }
 
-.page { position: absolute; top: 5px; left: 5px; right: 5px; bottom: 5px; }
+.page-wrapper { position: absolute; top: 5px; left: 5px; right: 5px; bottom: 5px; }
 
 .trapezoid { border-bottom: 50px solid #FFF; border-left: 50px solid transparent; height: 0; width: 100%; }
 
@@ -139,11 +146,28 @@ body, html { height: 100%; margin: 0; }
 
 .main { background: #FFF; position: relative; top: -1px; padding-bottom: 60px; margin-bottom: 5px; }
 
-.content { max-width: 1080px; width: calc(100% - 50px *2 ); margin: auto; }
+.page { max-width: 1080px; width: calc(100% - 50px *2 ); margin: auto; }
+
+.default .page { margin-top: 12vh; }
+
+.title-box { display: flex; align-items: center; margin-bottom: 70px; }
+
+.losange { width: 20px; height: 20px; transform: rotate(45deg); margin-left: -65px; }
+
+.fancy-line { position: absolute; height: 3px; left: calc(50% - 1080px / 2 + 200px * 0.75); right: 0; }
+
+.content { padding-top: 70px; }
 
 @media all and (max-width: 575px) { body .trapezoid { border-bottom: 30px solid #FFF; border-left: 30px solid transparent; }
   body .white-bg { height: calc(100% - 30px); }
   body .content { width: calc(100% - 30px *2 ); } }
+@media all and (max-width: 1279px) { body .title-box { margin-bottom: 50px; }
+  body .losange { margin-left: -20px; margin-right: 30px; } }
+@media all and (max-width: 1189px) { body .fancy-line { width: calc(100% - 200px); left: 200px; } }
+@media all and (max-width: 1023px) { body .title-box { flex-direction: column-reverse; align-items: center; margin-bottom: 50px; }
+  body .losange { width: 15px; height: 15px; margin: 0; margin-top: 50px; }
+  body .fancy-line { position: static; width: 100%; height: 2px; }
+  body .content { padding-top: 40px; } }
 .logo { display: block; }
 
 .menu-home nav { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
@@ -152,6 +176,8 @@ body, html { height: 100%; margin: 0; }
 .menu-home nav a.skills { top: 79%; left: 95%; }
 .menu-home nav a.contact { top: 99%; left: 0%; }
 .menu-home nav a.about { top: 13%; left: -11%; }
+
+nav.main-nav { position: absolute; top: 20px; right: 30px; width: 60px; height: 60px; border-radius: 60px; overflow: hidden; }
 
 nav.links { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 10px 0; width: 45%; max-width: 500px; margin-left: -10px; }
 nav.links a { display: flex; justify-content: center; align-items: center; width: 46px; height: 46px; margin: 10px; border-radius: 50%; }

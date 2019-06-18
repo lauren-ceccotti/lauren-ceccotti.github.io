@@ -3,6 +3,6 @@ layout: default
 title: contact
 ---
 
-# Contact page
+Contact page
 
 This page tells you a little bit about me.

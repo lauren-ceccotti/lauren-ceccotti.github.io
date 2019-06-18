@@ -11,14 +11,26 @@ body{
         // background-size: 100% 250%;
         // background-position: 0 70%;
         background-image: linear-gradient(#64E1E7, #74B1ED, #8580F4, #994AFC);
+        .losange, .fancy-line{
+            background: $turquoise;
+        }
     }
     &.skills{
         background-image: linear-gradient(#994AFC, #B446C4, #D0438D, #EC4056);
+        .losange, .fancy-line{
+            background: $purple;
+        }
     }
     &.about{
         background-image: linear-gradient(#DAF100, #B3EB4B, #87E5A2, #64E1E7);
+        .losange, .fancy-line{
+            background: $yellow;
+        }
     }
     &.contact{
         background-image: linear-gradient(#EC4056, #E48434, #DEC117, #DAF100);
+        .losange, .fancy-line{
+            background: $red;
+        }
     }
 }

@@ -3,6 +3,6 @@ layout: default
 title: skills
 ---
 
-# Skills page
+Skills page
 
 This page tells you a little bit about me.

@@ -36,6 +36,18 @@
 
 
 
+nav.main-nav{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    overflow: hidden;
+}
+
+
+
 nav.links{
     display: flex;
     align-items: center;

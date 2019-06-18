@@ -3,15 +3,26 @@
 
 {% include head.html %}
 
-<body class="{{ page.title }}">
+<body class="default {{ page.title }}">
 
-	<div class="page">
+	<div class="page-wrapper">
 		<div class="trapezoid"></div>
 		<div class="white-bg"></div>
+		{% include navigation.html %}
 		<div class="main">
-            {% include navigation.html %}
-            <div class="content">
-                {{ content }}
+            <div class="page">
+				<div class="heading">
+					<div class="title-box">
+						<div class="losange-box">
+							<div class="losange"></div>
+						</div>
+						<h2>{{ page.title | capitalize }}</h2>
+					</div>
+					<div class="fancy-line"></div>
+				</div>
+				<div class="content">
+					{{ content }}
+				</div>
             </div>
         </div>
 	</div>

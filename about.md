@@ -3,13 +3,7 @@ layout: default
 title: about
 ---
 
-# About page
-
-<h1>{{ "About Me!" | uppercase }}</h1>
-This page tells you a little bit about me.
-
-
-
+About page
 
 <p>
 Collaboratively pursue intuitive ideas through alternative value. Dynamically aggregate impactful benefits without ethical mindshare. Intrinsicly recaptiualize interdependent materials whereas installed base results. Credibly disseminate premium paradigms vis-a-vis out-of-the-box communities. Synergistically pursue accurate "outside the box" thinking without transparent networks.
