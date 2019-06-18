@@ -177,7 +177,7 @@ body, html { height: 100%; margin: 0; }
 .menu-home nav a.contact { top: 99%; left: 0%; }
 .menu-home nav a.about { top: 13%; left: -11%; }
 
-nav.main-nav { position: absolute; top: 20px; right: 30px; width: 60px; height: 60px; border-radius: 60px; overflow: hidden; }
+nav.main-nav { position: fixed; top: 20px; right: 30px; width: 60px; height: 60px; border-radius: 60px; overflow: hidden; z-index: 99; }
 
 nav.links { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 10px 0; width: 45%; max-width: 500px; margin-left: -10px; }
 nav.links a { display: flex; justify-content: center; align-items: center; width: 46px; height: 46px; margin: 10px; border-radius: 50%; }

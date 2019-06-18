@@ -37,13 +37,14 @@
 
 
 nav.main-nav{
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 30px;
     width: 60px;
     height: 60px;
     border-radius: 60px;
     overflow: hidden;
+    z-index: 99;
 }
 
 
