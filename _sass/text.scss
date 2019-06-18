@@ -1,0 +1,63 @@
+body{
+    //font-family: "Futura", "sans-serif";
+    font-family: futura-pt, sans-serif;
+    color: $main-text;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: futura-pt-bold, sans-serif;
+}
+
+
+h1{
+    font-size: 74px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 6vh;
+}
+
+
+nav{
+    a{
+        opacity: 1;
+        transition: all, 0.5s;
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+    a:hover, .current {
+        opacity: 0.3;
+    }
+}
+
+p{
+    font-size: 17px;
+    letter-spacing: 2px;
+    line-height: 24px;
+}
+
+
+@media all and (max-width: $tablet){
+
+    body{
+
+
+        h1{
+            font-size: 60px;
+        }
+
+        nav{
+            a{
+                font-size: 20px;
+            }
+        }
+
+        p{
+            font-size: 15px;
+            letter-spacing: 2px;
+            line-height: 24px;
+        }
+
+
+    }
+
+}

@@ -1,6 +1,10 @@
 ---
 ---
+@import "reset";
 @import "vars";
+@import "vars-responsive";
+@import "text";
 @import "backgrounds";
-@import "main";
-@import "menu";
+@import "structure";
+@import "navigation";
+@import "home";

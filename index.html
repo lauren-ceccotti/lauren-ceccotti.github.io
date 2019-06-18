@@ -1,5 +1,21 @@
 ---
-layout: default
+layout: home
 title: home
 ---
-<h1 class="logo">{{ "hello world!" | capitalize }}</h1>
+
+<div class="intro">
+    <section>
+        <h1>{{ "Salut !" | capitalize }}</h1>
+        <p>
+            Holisticly repurpose prospective potentialities through front-end infrastructures.
+            Authoritatively synthesize intuitive initiatives vis-a-vis client-focused core competencies.
+            Monotonectally expedite stand-alone human capital vis-a-vis diverse scenarios.
+        </p>
+    </section>
+
+    <section>
+        {% include navigation-home.html %}
+    </section>
+</div>
+
+{% include navigation-links.html %}

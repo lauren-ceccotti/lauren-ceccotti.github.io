@@ -1,6 +1,4 @@
 
-- name: home
-  link: /
 - name: projects
   link: /projects.html
 - name: skills

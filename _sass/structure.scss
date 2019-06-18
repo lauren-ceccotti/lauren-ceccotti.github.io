@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+
+.page {
+    position: absolute;
+    top: $border;
+    left: $border;
+    right: $border;
+    bottom: $border;
+}
+
+.trapezoid {
+    border-bottom: $trapezoid solid $page-color;
+    border-left: $trapezoid solid transparent;
+    height: 0;
+    width: 100%;
+}
+.white-bg{
+    position: absolute;
+    background: $page-color;
+    width: 100%;
+    height: calc(100% - #{$trapezoid});
+}
+
+.main {
+    background: $page-color;
+    position: relative;
+    top: -1px;
+    padding-bottom: 60px;
+    margin-bottom: 5px;
+}
+
+.content{
+    max-width: $max-w;
+    width: calc(100% - #{$trapezoid} *2 );
+    margin: auto;
+}
+
+
+
+@media all and (max-width: $mobile){
+
+    body{
+        .trapezoid {
+            border-bottom: $trapezoid-s solid $page-color;
+            border-left: $trapezoid-s solid transparent;
+        }
+        .white-bg{
+            height: calc(100% - #{$trapezoid-s});
+        }
+        .content{
+            width: calc(100% - #{$trapezoid-s} *2 );
+        }
+    }
+
+}

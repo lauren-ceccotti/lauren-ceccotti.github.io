@@ -1,0 +1,149 @@
+
+.logo{
+    display: block;
+}
+
+.menu-home{
+    nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        a{
+            position: absolute;
+
+            &.projects{
+                top: -4%;
+                left: 78%;
+            }
+            &.skills{
+                top: 79%;
+                left: 95%;
+            }
+            &.contact{
+                top: 99%;
+                left: 0%;
+            }
+            &.about{
+                top: 13%;
+                left: -11%;
+            }
+        }
+
+    }
+}
+
+
+
+nav.links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    width: 45%;
+    max-width: 500px;
+    margin-left: -10px;
+
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 46px;
+        height: 46px;
+        margin: 10px;
+        border-radius: 50%;
+
+        &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #FFF;
+        }
+
+        &.linkedin{
+            background-image: linear-gradient($yellow, $turquoise);
+        }
+        &.github{
+            background-image: linear-gradient($turquoise, $yellow);
+        }
+        &.codepen{
+            background-image: linear-gradient($turquoise, $purple);
+        }
+        &.behance{
+            background-image: linear-gradient($purple, $turquoise);
+        }
+        &.dribbble{
+            background-image: linear-gradient($yellow, $red);
+        }
+        &.malt{
+            background-image: linear-gradient($red, $yellow);
+        }
+        img{
+            width: 40px;
+            height: 40px;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    h5{
+        display: none;
+    }
+
+}
+
+
+
+
+@media all and (max-width: $tablet){
+
+
+     body{
+         .menu-home{
+            nav{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                position: static;
+                width: 30%;
+                height: auto;
+                padding: 7px 0;
+                a{
+                    position: static;
+                }
+            }
+        }
+
+         nav.links{
+             width: auto;
+             justify-content: space-around;
+             margin: 8vh auto 4vh;
+        }
+     }
+
+
+}
+
+@media all and (max-width: $mobile){
+
+    body{
+        .menu-home{
+            justify-content: space-around;
+           nav{
+               width: auto;
+               padding: 0;
+               padding-left: 10px;
+           }
+       }
+
+        nav.links{
+            max-width: 90%;
+       }
+    }
+
+}
