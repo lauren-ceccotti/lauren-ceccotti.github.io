@@ -78,6 +78,8 @@ html {
 
 .content{
     padding-top: 70px;
+    max-width: $max-w-read;
+    margin: auto;
 }
 
 
@@ -93,7 +95,7 @@ html {
         .white-bg{
             height: calc(100% - #{$trapezoid-s});
         }
-        .content{
+        .page{
             width: calc(100% - #{$trapezoid-s} *2 );
         }
     }
