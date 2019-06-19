@@ -123,7 +123,7 @@ p { font-size: 18px; letter-spacing: 1px; line-height: 30px; }
 
 @media all and (max-width: 1024px) { body h1 { font-size: 60px; }
   body h2 { font-size: 43px; letter-spacing: 3px; }
-  body nav a { font-size: 20px; }
+  body nav a, body .nav a { font-size: 20px; }
   body p { font-size: 16px; letter-spacing: 1px; line-height: 28px; } }
 body { background-repeat: no-repeat; background-attachment: fixed; }
 body.home { background-image: linear-gradient(to bottom, #994AFC, #64E1E7, #DAF100, #EC4056); }
