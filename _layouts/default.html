@@ -3,31 +3,45 @@
 
 {% include head.html %}
 
-<body class="default {{ page.title }}">
+<body class="{{ page.title }}">
 
 	<div class="page-wrapper">
 		<div class="trapezoid"></div>
 		<div class="white-bg"></div>
-		{% include navigation.html %}
+		{% if page.title != 'home' %}
+			{% include navigation.html %}
+		{% endif %}
 		<div class="main">
             <div class="page">
-				<div class="heading">
-					<div class="title-box">
-						<div class="losange-box">
-							<div class="losange"></div>
-						</div>
-						<h2>{{ page.title | capitalize }}</h2>
+
+				{% if page.title == 'home' %}
+					<div class="home-content">
+						{{ content }}
 					</div>
-					<div class="fancy-line"></div>
-				</div>
-				<div class="content">
-					{{ content }}
-				</div>
+				{% endif %}
+
+				{% if page.title != 'home' %}
+					<div class="heading">
+						<div class="title-box">
+							<div class="losange-box">
+								<div class="losange"></div>
+							</div>
+							<h2>{{ page.title | capitalize }}</h2>
+						</div>
+						<div class="fancy-line"></div>
+					</div>
+
+					<div class="content">
+						{{ content }}
+					</div>
+
+				{% endif %}
             </div>
         </div>
 	</div>
 
 {% include scripts.html %}
+
 </body>
 
 </html>

@@ -1,7 +1,10 @@
 
 #logo{
     display: block;
+    position: relative;
+    z-index: 100;
     width: 40px;
+    cursor: pointer;
     .st0, .st1, .st2, .st3{
         fill:none;
         stroke-width:15;

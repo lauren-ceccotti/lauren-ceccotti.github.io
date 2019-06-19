@@ -1,12 +1,15 @@
 <div class="menu-home">
     <img class="logo" src="assets/images/logo-color.svg" alt="">
     <nav>
-        {% for item in site.data.navigation-home %}
+        <ul>
+            {% for item in site.data.navigation-home %}
 
-        <a href="{{ item.link }}" class="{{ item.name }} {% if page.url == item.link %}current{% endif %}" >
-
-            {{ item.name | capitalize }}
-        </a>
-        {% endfor %}
+            <li class="{{ item.name }}">
+                <a href="{{ item.link }}" data-name="{{ item.name }}" class="{{ item.name }} {% if page.url == item.link %}current{% endif %}" >
+                    {{ item.name | capitalize }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
     </nav>
 </div>

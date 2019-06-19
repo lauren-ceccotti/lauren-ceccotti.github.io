@@ -22,16 +22,10 @@ h2{
     letter-spacing: 5px;
 }
 
-
 nav{
     a{
-        opacity: 1;
-        transition: all, 0.5s;
         font-size: 24px;
         letter-spacing: 2px;
-    }
-    a:hover, .current {
-        opacity: 0.3;
     }
     &.main-nav{
         a{
