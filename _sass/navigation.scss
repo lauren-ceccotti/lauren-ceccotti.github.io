@@ -24,7 +24,7 @@ a:hover, a.current {
 
 
 .menu-home{
-    nav{
+    ul.nav{
         position: absolute;
         top: 0;
         left: 0;
@@ -157,7 +157,7 @@ nav.links{
 
      body{
          .menu-home{
-            nav{
+            ul.nav{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -165,7 +165,7 @@ nav.links{
                 width: 30%;
                 height: auto;
                 padding: 7px 0;
-                a{
+                li{
                     position: static;
                 }
             }
@@ -186,7 +186,7 @@ nav.links{
     body{
         .menu-home{
             justify-content: space-around;
-           nav{
+           ul.nav{
                width: auto;
                padding: 0;
                padding-left: 10px;
