@@ -11,37 +11,26 @@ var windowW = $(window).width();
 var modeMobile;
 
 function detectScreensize() {
-    var windowH = $(window).height();
     var windowW = $(window).width();
-
-    if(windowW >= 769){
+    if(windowW > 1024){
+        $('body').removeClass('tablet');
+        $('body').addClass('desktop');
         modeMobile = false;
-    }else if(windowW < 769){
+    }else if(windowW <= 1024){
+        $('body').addClass('tablet');
+        $('body').removeClass('desktop');
         modeMobile = true;
     }
 }
-
 detectScreensize()
 console.log("modeMobile : " + modeMobile, windowW);
 
 
 
-//////   MENU
 
-var toggleMenu = new TimelineMax({paused:true});
-   toggleMenu.to(".nav-items", 0, {height: 'auto'})
-    .staggerTo(".main-nav li", 0.5, {opacity: 1}, 0.2, 0.1)
-    //staggerTo(el, transition d {prop:val} d-inter-el, delay-before-stag)
 
-   $("#logo").mouseenter(function(){
-       toggleMenu.play();
-       $(".main-nav").removeClass('folded');
-   });
-   $(".main-nav").mouseleave(function(){
-       toggleMenu.reverse();
-       $(this).addClass('folded');
-   });
 
+//////   BACKGROUNDS
 
 var homeColors = "#994AFC, #64E1E7, #DAF100, #EC4056";
 var projectsColors = "#64E1E7, #74B1ED, #8580F4, #994AFC";
@@ -50,7 +39,10 @@ var aboutColors = "#DAF100, #B3EB4B, #87E5A2, #64E1E7";
 var contactColors = "#EC4056, #E48434, #DEC117, #DAF100";
 
 
-//////   FAKE AJAX
+
+
+
+//////   HOME
 
 
 // quit home anim
@@ -67,7 +59,7 @@ function hometoOther(colors) {
 }
 
 
-// quit home links
+// quit home FAKE AJAX
 
 $('.menu-home a').on('click', function(event) {
     event.preventDefault();
@@ -88,18 +80,73 @@ $('.menu-home a').on('click', function(event) {
 
 
 
-// quit page anim
 
-function pagetoOther(colors) {
-    tl_pagetoOther = new TimelineLite(),
-    tl_pagetoOther.to(".fancy-line", 1, {scale: 0})
-    .to(".losange", 1, {opacity: 0, rotation: 360}, '-=1')
-    .to('body', 1, {backgroundImage: "linear-gradient("+colors+")"})
-    .to(".page, .main-nav", 0.5, {opacity: 0})
-}
+//////   MAIN-MENU DESKTOP
 
 
-// quit page links
+// open/close hover menu
+
+var tl_toggleMenu = new TimelineMax({paused:true});
+   tl_toggleMenu.to(".nav-items", 0, {height: 'auto'})
+    .staggerTo(".main-nav li", 0.5, {opacity: 1}, 0.2, 0.1)
+    //staggerTo(el, transition d {prop:val} d-inter-el, delay-before-stag)
+
+   $(".desktop #logo").mouseenter(function(){
+       tl_toggleMenu.play();
+       $(".main-nav").removeClass('folded');
+   });
+   $(".desktop .main-nav").mouseleave(function(){
+       tl_toggleMenu.reverse();
+       $(this).addClass('folded');
+   });
+
+
+
+   // quit page anim
+
+   function pagetoOther(colors) {
+       tl_pagetoOther = new TimelineMax(),
+       tl_pagetoOther.to(".fancy-line", 1, {scale: 0})
+       .to(".losange", 1, {opacity: 0, rotation: 360}, '-=1')
+       .to('body', 1, {backgroundImage: "linear-gradient("+colors+")"})
+       .to(".page, .main-nav", 0.5, {opacity: 0}, '-=0.5')
+   }
+
+
+
+
+
+//////   MAIN-MENU TABLET
+
+
+// animation open/close tablet menu
+
+var tl_tabletMenu = new TimelineMax({paused:true});
+  tl_tabletMenu.to("body", 0, {overflow: 'hidden'})
+  .to(".overlay", 0, {display: 'block'})
+  .to(".overlay", 1, {top: -300})
+  .to(".overlay", 1, {right: -300}, '-=1')
+  .to(".nav-items", 0, {display: 'flex'})
+  .staggerTo(".main-nav li", 0.3, {opacity: 1}, 0.2)
+  .to("#logo", 0.5, {opacity: 0}, '-=1')
+  .to("#logo", 0, {display: 'none'})
+  .to(".cross", 0, {display: 'block'})
+  .to(".cross", 0.5, {opacity: 1})
+
+
+    $(".tablet #logo").click(function(){
+        tl_tabletMenu.duration(1.5);
+        tl_tabletMenu.play();
+        $(".main-nav").removeClass('folded');
+    });
+
+    $(".tablet .cross").click(function(){
+      tl_tabletMenu.reverse();
+      $(".main-nav").addClass('folded');
+    });
+
+
+////// QUIT page function FAKE AJAX
 
 $('.main-nav a').on('click', function(event) {
     event.preventDefault();
@@ -112,7 +159,23 @@ $('.main-nav a').on('click', function(event) {
         window.location.href = link;
     }
 
-    pagetoOther(name);
-    tl_pagetoOther.eventCallback("onComplete", quitPage);
+    if(modeMobile == false){
 
+        console.log("falsemodeMobile : " + modeMobile, windowW);
+        pagetoOther(name)
+        tl_pagetoOther.eventCallback("onComplete", quitPage);
+
+    }else if(modeMobile == true){
+        console.log("tl_tabletMenu modeMobile : " + modeMobile, windowW);
+        tl_tabletMenu.reverse();
+        pagetoOther(name);
+        tl_tabletMenu.eventCallback("onComplete", tl_pagetoOther);
+        tl_pagetoOther.eventCallback("onComplete", quitPage);
+
+    }
+});
+
+
+$(window).resize(function () {
+	detectScreensize();
 });

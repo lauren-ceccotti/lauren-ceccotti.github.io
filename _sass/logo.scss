@@ -30,3 +30,9 @@
 .logo{
     display: block;
 }
+
+@media all and (max-width: $mobile){
+    #logo{
+        width: 30px;
+    }
+}

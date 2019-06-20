@@ -35,6 +35,15 @@ nav.main-nav{
     }
 }
 
+.cross {
+    font-size: 90px;
+    font-weight: 100;
+    font-family: futura-pt, sans-serif;
+    &:after {
+        content: "+";
+    }
+}
+
 
 p{
     font-size: 18px;
