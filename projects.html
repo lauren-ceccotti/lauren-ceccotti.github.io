@@ -1,0 +1,18 @@
+---
+title: projects
+---
+
+<ul>
+    {% assign sorted_projects = site.projects | sort:"type" | reverse %}
+
+    {% for project in sorted_projects %}
+    <li>
+        <a href="{{ project.url }}">
+            <h3>{{ project.title }}</h3>
+            <h4>{{ project.type }}</h4>
+            <!-- <p>{{ project.content | markdownify | truncate: 20 }}</p> -->
+            <p>{{ project.content | truncatewords: 4 }}</p>
+        </a>
+    </li>
+    {% endfor %}
+</ul>

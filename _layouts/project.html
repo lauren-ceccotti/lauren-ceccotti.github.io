@@ -3,7 +3,7 @@
 
 {% include head.html %}
 
-<body class="{{ page.title }}">
+<body class="projects {{ page.name }}">
 
 	<div class="page-wrapper">
 		<div class="trapezoid"></div>
@@ -25,6 +25,10 @@
 				</div>
 
 				<div class="content">
+                    <div class="">
+                        <h4> Type de projet: <small>{{ page.type | capitalize }}</small></h4>
+                        <h5>{{ page.compagny | capitalize }}</h5>
+                    </div>
 					{{ content }}
 				</div>
 
