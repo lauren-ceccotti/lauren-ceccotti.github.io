@@ -107,9 +107,9 @@ var tl_toggleMenu = new TimelineMax({paused:true});
    function pagetoOther(colors) {
        tl_pagetoOther = new TimelineMax(),
        tl_pagetoOther.to(".fancy-line", 1, {scale: 0})
-       .to(".losange", 1, {opacity: 0, rotation: 360}, '-=1')
-       .to('body', 1, {backgroundImage: "linear-gradient("+colors+")"})
-       .to(".page, .main-nav", 0.5, {opacity: 0}, '-=0.5')
+       .to(".losange", 1, {opacity: 0, rotation: 360}, 0)
+       .to(".page, .main-nav", 0.5, {opacity: 0}, 0.5)
+       .to('body', 1, {backgroundImage: "linear-gradient("+colors+")"}, 0.5)
    }
 
 
@@ -123,25 +123,29 @@ var tl_toggleMenu = new TimelineMax({paused:true});
 
 var tl_tabletMenu = new TimelineMax({paused:true});
   tl_tabletMenu.to("body", 0, {overflow: 'hidden'})
-  .to(".overlay", 0, {display: 'block'})
-  .to(".overlay", 1, {top: -300})
-  .to(".overlay", 1, {right: -300}, '-=1')
   .to(".nav-items", 0, {display: 'flex'})
-  .staggerTo(".main-nav li", 0.3, {opacity: 1}, 0.2)
-  .to("#logo", 0.5, {opacity: 0}, '-=1')
   .to("#logo", 0, {display: 'none'})
   .to(".cross", 0, {display: 'block'})
-  .to(".cross", 0.5, {opacity: 1})
+  .to(".overlay", 0, {display: 'block'})
+  .to(".overlay", 1, {top: -300},0)
+  .to(".overlay", 1, {right: -300},0)
+  .to("#logo", 0.5, {opacity: 0},0)
+  .to(".cross", 0.5, {opacity: 1},0)
+  .staggerTo(".main-nav li", 0.5, {opacity: 1}, 0.2, 0.5)
+
+
+
 
 
     $(".tablet #logo").click(function(){
-        tl_tabletMenu.duration(1.5);
+        tl_tabletMenu.duration(1);
         tl_tabletMenu.play();
         $(".main-nav").removeClass('folded');
     });
 
     $(".tablet .cross").click(function(){
-      tl_tabletMenu.reverse();
+        tl_tabletMenu.duration(0.6);
+        tl_tabletMenu.reverse();
       $(".main-nav").addClass('folded');
     });
 
@@ -167,8 +171,10 @@ $('.main-nav a').on('click', function(event) {
 
     }else if(modeMobile == true){
         console.log("tl_tabletMenu modeMobile : " + modeMobile, windowW);
+        tl_tabletMenu.duration(0.6);
         tl_tabletMenu.reverse();
         pagetoOther(name);
+        tl_pagetoOther.delay(0.5)
         tl_tabletMenu.eventCallback("onComplete", tl_pagetoOther);
         tl_pagetoOther.eventCallback("onComplete", quitPage);
 

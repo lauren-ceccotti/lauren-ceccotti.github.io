@@ -128,7 +128,11 @@ p { font-size: 18px; letter-spacing: 1px; line-height: 30px; }
 @media all and (max-width: 1024px) { body h1 { font-size: 60px; }
   body h2 { font-size: 43px; letter-spacing: 3px; text-align: center; }
   body nav a, body .nav a { font-size: 20px; }
+  body nav.main-nav a { font-size: 35px; letter-spacing: 12px; }
   body p { font-size: 16px; letter-spacing: 1px; line-height: 28px; } }
+@media all and (max-width: 1024px) { body nav.main-nav a { font-size: 30px; letter-spacing: 6px; }
+  body .cross { font-size: 80px; }
+  body .cross:after { content: "+"; } }
 body { background-repeat: no-repeat; background-attachment: fixed; }
 body.home { background-image: linear-gradient(to bottom, #994AFC, #64E1E7, #DAF100, #EC4056); }
 body.projects, body.project { background-image: linear-gradient(#64E1E7, #74B1ED, #8580F4, #994AFC); }
@@ -186,7 +190,7 @@ body:not(.home) .page { margin-top: 12vh; }
   body .content { padding-top: 40px; } }
 a { transition: color, 0.5s; }
 
-a:hover, a.current { color: #CCC; }
+a:hover, a.current { color: #BBB; }
 
 .menu-home ul.nav { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .menu-home ul.nav li { position: absolute; }
@@ -221,9 +225,12 @@ nav.links h5 { display: none; }
 
 @media all and (max-width: 1024px) { body .main-nav { padding: 25px 0px; width: 95px; }
   body .main-nav .nav-items { justify-content: center; position: fixed; width: 50%; height: 100%; top: 0; bottom: 0; right: 0; left: 0; margin: 0 auto; padding-top: 0; display: none; }
-  body .overlay { position: fixed; top: -1300px; right: -1300px; width: 1500px; height: 1500px; border-radius: 1500px; z-index: 98; background: #FFF; box-shadow: -1px 3px 4px 3px rgba(0, 0, 0, 0.1); } }
+  body .main-nav li { margin: 30px 0; }
+  body .overlay { position: fixed; top: -1300px; right: -1300px; width: 1500px; height: 1500px; border-radius: 1500px; z-index: 98; background: #FFF; box-shadow: -1px 3px 4px 3px rgba(0, 0, 0, 0.1); display: none; } }
 @media all and (max-width: 576px) { body .main-nav { padding: 15px 0px; width: 65px; }
-  body .main-nav li { margin: 25px 0; opacity: 0; } }
+  body .main-nav li { margin: 30px 0; }
+  body .cross { top: -10px; }
+  body .overlay { top: -900px; right: -900px; width: 1100px; height: 1100px; border-radius: 1100px; } }
 .home .intro { display: flex; justify-content: space-between; align-items: center; margin-top: 7vh; }
 .home .intro section { width: 50%; align-self: center; }
 .home .intro section:first-of-type { padding-right: 40px; }

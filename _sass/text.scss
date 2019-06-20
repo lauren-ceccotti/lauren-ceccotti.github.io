@@ -28,6 +28,7 @@ nav, .nav{
         letter-spacing: 2px;
     }
 }
+
 nav.main-nav{
     a{
         font-size: 22px;
@@ -52,6 +53,7 @@ p{
 }
 
 
+
 @media all and (max-width: $tablet){
 
     body{
@@ -72,13 +74,39 @@ p{
             }
         }
 
+        nav.main-nav{
+            a{
+                font-size: 35px;
+                letter-spacing: 12px;
+            }
+        }
+
         p{
             font-size: 16px;
             letter-spacing: 1px;
             line-height: 28px;
         }
+    }
+}
 
+
+@media all and (max-width: $tablet){
+
+    body{
+
+        nav.main-nav{
+            a{
+                font-size: 30px;
+                letter-spacing: 6px;
+            }
+        }
+
+        .cross {
+            font-size: 80px;
+            &:after {
+                content: "+";
+            }
+        }
 
     }
-
 }
