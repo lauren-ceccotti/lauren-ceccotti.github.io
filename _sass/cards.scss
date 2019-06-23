@@ -1,0 +1,131 @@
+
+.card-grid {
+    margin: 60px auto;
+    max-width: 950px;
+    // margin-left: -#{$card-padding};
+    // width: calc( 100% + #{$card-padding} * 2);
+}
+
+
+.row{
+    overflow: hidden;
+    clear: both;
+    position: relative;
+    padding: $card-padding;
+    margin-top: calc( 4% - #{$card-padding * 2});
+}
+
+
+.row:nth-child(odd){
+    //small-card
+    .card{
+        float: right;
+    }
+    //last small-card
+    .card:last-child{
+        position: absolute;
+        right: $card-padding;
+        bottom: $card-padding;
+        width: calc( 48% - #{$card-padding});
+    }
+    //big-card
+    .card:first-child{
+        float: left;
+        @include big-card;
+    }
+}
+
+
+.row:nth-child(even){
+    //small-card
+    .card{
+        float: left;
+    }
+    //last small-card
+    .card:last-child{
+        position: absolute;
+        left: $card-padding;
+        bottom: $card-padding;
+        width: calc( 48% - #{$card-padding});
+    }
+    //big-card
+    .card:first-child{
+        float: right;
+        @include big-card;
+    }
+}
+
+
+
+//small-card > all cards
+.card {
+    @include small-card;
+
+    h3{
+        padding-top: 10px;
+        padding-left: 15px;
+    }
+    label{
+        position: absolute;
+        bottom: 20px;
+        right: 25px;
+    }
+}
+.card-content {
+    @include small-card-content;
+}
+
+
+@media all and (max-width: $small-tablet){
+
+    body{
+
+        .row:nth-child(even), .row:nth-child(odd){
+            padding: 0;
+            overflow: visible;
+            margin: 0 auto;
+            .card{
+                float: none!important;
+                position: relative!important;
+                width: 100%!important;
+                top: auto!important;
+                bottom: auto!important;
+                left: auto!important;
+                right: auto!important;
+                margin-bottom: 40px;
+
+                &:after {
+                    padding-bottom: 35%!important;
+                }
+                .card-content{
+                    img, .image-filter{
+                        width: 40%!important;
+                        height: 100%!important;
+                    }
+                    .card-desc{
+                        top: 0!important;
+                        left: 40%!important;
+                        width: 60%!important;
+                        height: 100%!important;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+
+
+@media all and (max-width: $mobile){
+
+    body{
+        .card{
+            h3{
+                padding-top: 5px;
+                padding-left: 10px;
+            }
+        }
+    }
+}

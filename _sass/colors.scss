@@ -17,6 +17,10 @@ body{
         // a:hover, a.current{
         //     color: darken($turquoise, $dark);
         // }
+
+        section{
+            background: rgba($turquoise, 0.05);
+        }
     }
     &.skills{
         background-image: linear-gradient(#994AFC, #B446C4, #D0438D, #EC4056);

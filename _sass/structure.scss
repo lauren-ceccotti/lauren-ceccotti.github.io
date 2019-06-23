@@ -38,8 +38,6 @@ html {
 }
 
 .page{
-    max-width: $max-w;
-    width: calc(100% - #{$trapezoid} *2 );
     margin: auto;
     //opacity: 0;
     animation: fadeIn 1s;
@@ -54,6 +52,7 @@ body:not(.home) .page{
 }
 
 .heading{
+    @include site-limite;
 }
 
 .title-box{
@@ -82,33 +81,23 @@ body:not(.home) .page{
 
 .content{
     padding-top: 70px;
-    max-width: $max-w-read;
     margin: auto;
 }
 
-
-
-
-@media all and (max-width: $mobile){
-
-    body{
-        .trapezoid {
-            border-bottom: $trapezoid-s solid $page-color;
-            border-left: $trapezoid-s solid transparent;
-        }
-        .white-bg{
-            height: calc(100% - #{$trapezoid-s});
-        }
-        .page{
-            width: calc(100% - #{$trapezoid-s} *2 );
-        }
-    }
-
+section{
+    //all page L for color bg
+    margin: 70px 0;
+    padding: 30px 0;
 }
 
+article{
+    @include site-limite;
+}
 
-
-
+p{
+    max-width: $max-w-read;
+    margin: auto;
+}
 
 @media all and (max-width: $large-screen){
 
@@ -161,6 +150,25 @@ body:not(.home) .page{
 
         .content{
             padding-top: 40px;
+        }
+    }
+
+}
+
+
+
+@media all and (max-width: $mobile){
+
+    body{
+        .trapezoid {
+            border-bottom: $trapezoid-s solid $page-color;
+            border-left: $trapezoid-s solid transparent;
+        }
+        .white-bg{
+            height: calc(100% - #{$trapezoid-s});
+        }
+        .article{
+            width: calc(100% - #{$trapezoid-s} *2 );
         }
     }
 

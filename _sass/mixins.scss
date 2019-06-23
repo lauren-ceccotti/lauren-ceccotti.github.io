@@ -1,0 +1,6 @@
+
+@mixin site-limite {
+    max-width: $max-w;
+    width: calc(100% - #{$trapezoid} *2 );
+    margin: auto;
+}

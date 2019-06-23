@@ -1,18 +1,55 @@
 ---
 title: projects
 ---
+<article>
+    <p>
+        Holisticly repurpose prospective potentialities through front-end infrastructures. Authoritatively synthesize intuitive initiatives vis-a-vis client-focused core competencies. Monotonectally expedite stand-alone human capital vis-a-vis diverse scenarios.
+        the quick brown fox jumps over the lazy dog
+    </p>
+</article>
 
-<ul>
-    {% assign sorted_projects = site.projects | sort:"type" | reverse %}
 
-    {% for project in sorted_projects %}
-    <li>
-        <a href="{{ project.url }}">
-            <h3>{{ project.title }}</h3>
-            <h4>{{ project.type }}</h4>
-            <!-- <p>{{ project.content | markdownify | truncate: 20 }}</p> -->
-            <p>{{ project.content | truncatewords: 4 }}</p>
-        </a>
-    </li>
-    {% endfor %}
-</ul>
+<section>
+    <article class="">
+
+        <div class="card-grid">
+
+            {% assign sorted_projects = site.projects | sort:"type" | reverse %}
+
+            {% assign j = 1  %}
+
+                {% for project in sorted_projects %}
+
+                    {% if j == 1 %}
+                    <div class="row">
+                    {% endif %}
+                        <a class="card" href="{{ project.url }}">
+                            <div class="card-content">
+                                <div class="image-filter"></div>
+                                <img src="assets/images/test/{{ project.cover }}" alt="">
+                                <div class="card-desc">
+                                    <h3>{{ project.title }}</h3>
+                                    <label>{{ project.type }}</label>
+                                    <!-- <p>{{ project.content | markdownify | truncate: 20 }}</p> -->
+                                </div>
+                            </div>
+                        </a>
+
+                    {% if j == 3 %}
+                        </div> <!-- close row full -->
+                        {% assign j = 0 %}
+                    {% endif %}
+
+                    {% assign j = j | plus:1 %}
+                {% endfor %}
+
+                {% if j > 1 %}
+                    </div> <!-- close row < 3 -->
+                {% endif %}
+        </div> <!-- close grid -->
+
+
+
+
+    </article>
+</section>

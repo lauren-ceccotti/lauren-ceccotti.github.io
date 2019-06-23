@@ -1,4 +1,10 @@
 
+.home-content{
+    @include site-limite;
+}
+
+
+
 .home .intro{
     display: flex;
     //justify-content: space-around;
@@ -9,6 +15,8 @@
     section{
         width: 50%;
         align-self: center;
+        margin: 0;
+        padding: 0;
         &:first-of-type{
             padding-right: 40px;
         }
