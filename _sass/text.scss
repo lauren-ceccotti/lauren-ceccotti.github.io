@@ -53,6 +53,17 @@ nav.main-nav{
     }
 }
 
+nav.links{
+    h5{
+        font-family: futura-pt, sans-serif;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+        letter-spacing: 4px;
+        text-transform: capitalize;
+    }
+}
+
 .cross {
     font-size: 90px;
     font-weight: 100;
@@ -82,6 +93,7 @@ p{
         h2{
             font-size: 43px;
             letter-spacing: 3px;
+            line-height: 60px;
             text-align: center;
         }
 

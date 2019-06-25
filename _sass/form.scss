@@ -1,0 +1,154 @@
+
+
+form{
+    margin-bottom: 80px;
+    li{
+        position: relative;
+        margin: 75px 0;
+    }
+
+    // PLACEHOLDER EN MODE INVISIBLE
+    input.balloon, textarea.balloon {
+        &::placeholder {
+            letter-spacing: 3px;
+            font-size: 14px;
+            font-family: futura-pt, sans-serif;
+            color: $lightest-grey;
+            transition: all, 0.5s;
+        }
+    }
+
+    // INPUT NORMAL
+    input.balloon, textarea.balloon {
+    	display: block;
+    	width: 100%;
+    	height: 55px;
+    	padding: 0 25px;
+    	background: $lightest-grey;
+    	border: 0;
+    	border-radius: 3px;
+    	outline: 0;
+    	border: 1px solid transparent;
+        transition: all, 0.3s;
+
+    	letter-spacing: 3px;
+    	font-size: 14px;
+        color: $main-text;
+        font-family: futura-pt, sans-serif;
+
+
+
+        // LABEL VOISIN INPUT EN MODE COUVRANT INPUT
+    	+ label {
+    		display: inline-block;
+    		position: absolute;
+    		height: 55px;
+    		top: 0;
+    		left: 0;
+    		padding: 0 25px;
+    		line-height: 55px;
+    		color: $red;
+    		border-radius: 3px;
+    		background: $lightest-grey;
+            transition: all, 0.3s;
+
+            letter-spacing: 4px;
+            font-size: 14px;
+            //text-shadow: 0 1px 0 rgba(19,74,70,0);
+
+    		//VIRGULE DE LA BULLE
+    		&:after {
+    			position: absolute;
+    			content: "";
+    			width: 0;
+    			height: 0;
+    			top: 100%;
+    			left: 50%;
+    			margin-left: -3px;
+    			border-left: 3px solid transparent;
+    			border-right: 3px solid transparent;
+    			border-top: 3px solid transparent;
+                transition: all, 0.3s;
+    		}
+
+    	}//fin label
+    }//fin balloon
+
+
+    .active.balloon, .balloon:focus, .balloon:active {
+        // INPUT EN MODE ACTIVE // FOCUS // OU AVEC CONTENU
+    	background: $lightest-grey;
+    	border: 1px solid darken($lightest-grey, 4%);
+
+
+        // LABEL EN MODE BULLE ACTIVE
+    	+ label {
+    		color: $lightest-grey;
+    		background: $main-text;
+            transform: translateY(-65px);
+
+    		&:after {
+                //VIRGULE DE LA BULLE
+    			border-top: 4px solid $main-text;
+    		}
+    	}
+    }
+
+    textarea.balloon{
+    	display: block;
+    	height: 150px;
+    	padding: 25px;
+    }
+
+    // PLACEHOLDER EN MODE VISIBLE
+    input.balloon:focus, input.balloon:active,
+    textarea.balloon:focus, textarea.balloon:active,
+    .active.balloon {
+        &::placeholder {
+          color: darken($lightest-grey, 20%);
+        }
+    }
+
+
+
+	input[type=submit]{
+        display: block;
+		height: 70px;
+		width: 50%;
+        margin: auto;
+		padding: 0;
+        border-radius: 3px;
+
+		background: $main-text;
+		outline: 0;
+        border: 1px solid transparent;
+        transition: all, 0.5s;
+        cursor: pointer;
+
+        letter-spacing: 7px;
+    	font-size: 17px;
+        font-family: futura-pt, sans-serif;
+        //text-transform: uppercase;
+		color: $lightest-grey;
+
+        &:hover{
+            background: $lightest-grey;
+            color: $main-text;
+            border: 1px solid darken($lightest-grey, 4%);
+        }
+	}
+    input[type=submit]:focus{
+        background: $main-text;
+        color: $lightest-grey;
+        border: 1px solid transparent;
+    }
+
+
+    input.balloon:invalid, textarea.balloon:invalid{
+        + label {
+            color: $red;
+        }
+    }
+
+
+}

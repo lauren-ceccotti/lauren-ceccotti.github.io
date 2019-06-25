@@ -1,13 +1,23 @@
 
+- name: cv
+  text: download resume
+  link: /assets/download/cv.pdf
 - name: linkedin
+  text: linkedin
   link: https://www.linkedin.com/in/lauren-ceccotti-183a90103
 - name: github
+  text: github
   link: https://github.com/lauren-ceccotti
 - name: codepen
+  text: codepen
   link: https://codepen.io/AkitaInu99
-- name: behance
-  link: https://www.behance.net/laurenceccotti
-- name: dribbble
-  link: https://dribbble.com/lauren-ceccotti
-- name: malt
-  link: https://www.malt.fr/profile/laurenceccotti
+
+# - name: dribbble
+#   text: dribbble
+#   link: https://dribbble.com/lauren-ceccotti
+# - name: behance
+#   text: behance
+#   link: https://www.behance.net/laurenceccotti
+# - name: malt
+#   text: malt
+#   link: https://www.malt.fr/profile/laurenceccotti

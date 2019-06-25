@@ -4,3 +4,7 @@
     width: calc(100% - #{$trapezoid} *2 );
     margin: auto;
 }
+
+@mixin bx-shad($a: 0.3) {
+    box-shadow: 2px 2px 2px 0 rgba(black, $a);
+}

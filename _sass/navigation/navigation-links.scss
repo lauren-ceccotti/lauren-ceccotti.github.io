@@ -1,6 +1,7 @@
 
 
 nav.links{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,7 +9,8 @@ nav.links{
     padding: 10px 0;
     width: 45%;
     max-width: 500px;
-    margin-left: -10px;
+    margin: 60px auto 30px;
+
 
     a{
         display: flex;
@@ -18,6 +20,10 @@ nav.links{
         height: 46px;
         margin: 10px;
         border-radius: 50%;
+        transform: scale(1);
+        transition: all, 0.5s;
+        backface-visibility: hidden;
+        @include bx-shad(0);
 
         &:before{
             content: "";
@@ -38,6 +44,9 @@ nav.links{
         &.codepen{
             background-image: linear-gradient($turquoise, $purple);
         }
+        &.cv{
+            background-image: linear-gradient($purple, $turquoise);
+        }
         &.behance{
             background-image: linear-gradient($purple, $turquoise);
         }
@@ -52,19 +61,34 @@ nav.links{
             height: 40px;
             position: relative;
             z-index: 1;
+            -webkit-font-smoothing: subpixel-antialiased;
         }
     }
 
     h5{
-        display: none;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        color: $link-hover;
+        opacity: 0;
+        transition: opacity, 0.5S;
     }
-
 }
+
+nav.links a:hover{
+    transform: scale(1.1);
+    @include bx-shad;
+
+    &+h5{
+        opacity: 1;
+    }
+}
+
 
 @media all and (max-width: $tablet){
 
      body{
-         nav.links{
+         .home-content nav.links{
              width: auto;
              justify-content: space-around;
              margin: 8vh auto 4vh;
@@ -75,7 +99,7 @@ nav.links{
 @media all and (max-width: $mobile){
 
     body{
-        nav.links{
+        .home-content nav.links{
             max-width: 90%;
        }
 

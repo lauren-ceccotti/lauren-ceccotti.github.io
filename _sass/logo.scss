@@ -5,6 +5,11 @@
     z-index: 100;
     width: 40px;
     cursor: pointer;
+    transform: scale(1);
+    transition: all, 0.5s;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+
     .st0, .st1, .st2, .st3{
         fill:none;
         stroke-width:15;
@@ -22,6 +27,10 @@
     }
     .st3{
         stroke:$turquoise;
+    }
+
+    &:hover{
+        transform: scale(1.2);
     }
 }
 

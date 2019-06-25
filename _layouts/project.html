@@ -25,14 +25,22 @@
 				</div>
 
 				<div class="content">
-                    <div class="">
-                        <h4> Type de projet: <small>{{ page.type | capitalize }}</small></h4>
-                        <h5>{{ page.compagny | capitalize }}</h5>
-                    </div>
+                    <article>
+						<p>
+
+							<h4> Type de projet: <small>{{ page.type | capitalize }}</small></h4>
+	                        <h5>{{ page.compagny | capitalize }}</h5>
+
+						</p>
+
+                    </article>
 					{{ content }}
 				</div>
 
+				{% include navigation-links.html %}
+
             </div>
+			{% include back.html %}
         </div>
 	</div>
 

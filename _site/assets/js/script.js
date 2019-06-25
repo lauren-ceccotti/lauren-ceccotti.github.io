@@ -182,6 +182,34 @@ $('.main-nav a').on('click', function(event) {
 });
 
 
+
+
+
+var input = $('.balloon');
+
+function floatLabel(inputType){
+
+	$(inputType).each(function(){
+
+		var $this = $(this);
+		// on focus add cladd active to label
+		$this.focus(function(){
+			$this.addClass('active');
+		});
+		//on blur check field and remove class if needed
+		$this.blur(function(){
+			if($this.val() === '' || $this.val() === 'blank'){
+				$this.removeClass('active');
+			}
+		});
+
+	});
+}
+floatLabel(input);
+
+
+
+
 $(window).resize(function () {
 	detectScreensize();
 });

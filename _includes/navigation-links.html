@@ -2,8 +2,8 @@
 <nav class="links">
     {% for item in site.data.navigation-links %}
         <a href="{{ item.link }}" class="{{ item.name }}" target="_blank">
-            <img class="{{ item.name }}" src="assets/images/logo-links/{{ item.name }}.svg" alt="">
+            <img class="{{ item.name }}" src="/assets/images/logo-links/{{ item.name }}.svg" alt="">
         </a>
-        <h5>{{ item.name }}</h5>
+        <h5>{{ item.text }}</h5>
     {% endfor %}
 </nav>

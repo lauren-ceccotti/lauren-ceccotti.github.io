@@ -1,6 +1,11 @@
 
 .home-content{
     @include site-limite;
+
+    nav.links{
+        margin: 0;
+        margin-left: -10px;
+    }
 }
 
 
