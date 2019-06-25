@@ -54,7 +54,6 @@ form{
 
             letter-spacing: 4px;
             font-size: 14px;
-            //text-shadow: 0 1px 0 rgba(19,74,70,0);
 
     		//VIRGULE DE LA BULLE
     		&:after {
@@ -128,7 +127,6 @@ form{
         letter-spacing: 7px;
     	font-size: 17px;
         font-family: futura-pt, sans-serif;
-        //text-transform: uppercase;
 		color: $lightest-grey;
 
         &:hover{
@@ -150,5 +148,40 @@ form{
         }
     }
 
+}
 
+@media all and (max-width: $mobile){
+
+    body{
+        form{
+
+
+            // PLACEHOLDER EN MODE INVISIBLE
+            input.balloon, textarea.balloon {
+                &::placeholder {
+                    letter-spacing: 2px;
+                    font-size: 13px;
+                }
+            }
+
+
+            // INPUT NORMAL
+            input.balloon, textarea.balloon {
+                letter-spacing: 2px;
+                font-size: 13px;
+
+                // LABEL VOISIN INPUT EN MODE COUVRANT INPUT
+                + label {
+                    letter-spacing: 3px;
+                    font-size: 13px;
+                }
+            }
+
+            input[type=submit]{
+                width: 100%;
+            }
+
+
+       }
+    }
 }
