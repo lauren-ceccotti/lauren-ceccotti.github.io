@@ -152,7 +152,7 @@ var tl_tabletMenu = new TimelineMax({paused:true});
 
 ////// QUIT page function FAKE AJAX
 
-$('.main-nav a').on('click', function(event) {
+$('a.site-link').on('click', function(event) {
     event.preventDefault();
     var link = $(this).attr('href');
     var name = $(this).attr('data-name');

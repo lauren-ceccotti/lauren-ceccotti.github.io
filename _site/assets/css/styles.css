@@ -142,7 +142,7 @@ p, span, article a, article li { font-size: 18px; letter-spacing: 1px; line-heig
   body h2 { font-size: 43px; letter-spacing: 3px; line-height: 60px; text-align: center; }
   body nav a, body .nav a { font-size: 20px; }
   body nav.main-nav a { font-size: 35px; letter-spacing: 12px; }
-  body p { font-size: 16px; letter-spacing: 1px; line-height: 28px; } }
+  body p, body p a { font-size: 16px; letter-spacing: 1px; line-height: 28px; } }
 @media all and (max-width: 1024px) { body nav.main-nav a { font-size: 30px; letter-spacing: 6px; }
   body .cross { font-size: 80px; }
   body .cross:after { content: "+"; } }
