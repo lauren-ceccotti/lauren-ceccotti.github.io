@@ -11,6 +11,10 @@
 - name: codepen
   text: codepen
   link: https://codepen.io/AkitaInu99
+- name: malt
+  text: malt
+  link: https://www.malt.fr/profile/laurenceccotti
+
 
 # - name: dribbble
 #   text: dribbble
@@ -18,6 +22,3 @@
 # - name: behance
 #   text: behance
 #   link: https://www.behance.net/laurenceccotti
-# - name: malt
-#   text: malt
-#   link: https://www.malt.fr/profile/laurenceccotti

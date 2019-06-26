@@ -1,0 +1,44 @@
+[class^='align-'], [class*=' align-']{
+
+    display: flex;
+
+    //x-pos
+    &.x{
+        &-fs{
+            justify-content: flex-start;
+        }
+        &-fe{
+            justify-content: flex-end;
+        }
+        &-sb{
+            justify-content: space-between;
+        }
+        &-sa{
+            justify-content: space-around;
+        }
+        &-c{
+            justify-content: center;
+        }
+    }
+
+    //y-pos
+    &.y{
+        &-fs{
+            align-items: flex-start;
+        }
+        &-fe{
+            align-items: flex-end;
+        }
+        &-sb{
+            align-items: space-between;
+        }
+        &-sa{
+            align-items: space-around;
+        }
+        &-c{
+            align-items: center;
+        }
+    }
+}
+
+//first class-name contained,  class-name contained

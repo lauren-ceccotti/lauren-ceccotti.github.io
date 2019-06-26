@@ -74,12 +74,14 @@ nav.links{
 }
 
 
-p{
+p, span, article a{
     font-size: 18px;
     letter-spacing: 1px;
     line-height: 30px;
 }
-
+article a{
+    //attention cards
+}
 
 
 @media all and (max-width: $tablet){

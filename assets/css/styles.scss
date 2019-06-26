@@ -2,10 +2,11 @@
 ---
 @import "reset";
 @import "vars";
+@import "vars-responsive";
 @import "mixins";
 @import "mixins-cards";
-@import "vars-responsive";
 @import "animations";
+@import "tools";
 @import "text";
 @import "colors";
 @import "logo";
@@ -15,3 +16,4 @@
 @import "back";
 @import "form";
 @import "home";
+@import "contact";

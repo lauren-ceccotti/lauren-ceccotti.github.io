@@ -1,0 +1,14 @@
+.contact-infos{
+    width: 50%;
+    margin: 50px auto 0;
+
+    & > div{
+        margin: 10px 0;
+    }
+    img{
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+    }
+
+}

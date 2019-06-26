@@ -4,7 +4,7 @@ nav.links{
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     padding: 10px 0;
     width: 45%;
@@ -82,6 +82,10 @@ nav.links a:hover{
     &+h5{
         opacity: 1;
     }
+}
+
+.home-content nav.links{
+    justify-content: space-between;
 }
 
 
