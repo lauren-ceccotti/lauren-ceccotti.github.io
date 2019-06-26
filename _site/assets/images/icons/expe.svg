@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="66.346" height="89.6" viewBox="0 0 66.346 89.6">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+        stroke: #333;
+        stroke-linecap: round;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2 {
+        <!-- stroke-width: 0.8px; -->
+      }
+
+      .cls-2, .cls-3 {
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1" data-name="Calque 1" transform="translate(-0.017 -5)">
+    <g id="Groupe_69" data-name="Groupe 69" transform="translate(0.539 5.5)">
+      <path id="Tracé_30" data-name="Tracé 30" class="cls-1" d="M17.71,24.564a4.647,4.647,0,1,1-6.568.73h0a4.686,4.686,0,0,1,6.568-.73Z" transform="translate(26.732 40.834)"/>
+      <circle id="Ellipse_7" data-name="Ellipse 7" class="cls-2" cx="4.686" cy="4.686" r="4.686" transform="translate(14.406 41.56)"/>
+      <path id="Tracé_43" data-name="Tracé 43" class="cls-3" d="M17.327,5.5h7.682V33.968C9.1,37.823-1.273,52.147.8,67.406S16.753,94.1,33.19,94.1,63.5,82.664,65.576,67.406,57.283,37.823,41.371,33.968V5.5h7.49" transform="translate(-0.539 -5.5)"/>
+    </g>
+  </g>
+</svg>

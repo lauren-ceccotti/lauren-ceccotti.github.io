@@ -141,7 +141,7 @@ nav.links h5 { font-family: futura-pt, sans-serif; text-align: center; line-heig
 .cross { font-size: 90px; font-weight: 100; font-family: futura-pt, sans-serif; }
 .cross:after { content: "+"; }
 
-p, span, article a { font-size: 18px; letter-spacing: 1px; line-height: 30px; }
+p, span, article a, article li { font-size: 18px; letter-spacing: 1px; line-height: 30px; }
 
 @media all and (max-width: 1024px) { body h1 { font-size: 60px; }
   body h2 { font-size: 43px; letter-spacing: 3px; line-height: 60px; text-align: center; }
@@ -312,7 +312,7 @@ a.back { position: fixed; bottom: 30px; left: 5px; z-index: 97; display: flex; j
 a.back span { display: block; margin: 0 20px; width: 0; overflow: hidden; transition: all, 0.5s; white-space: nowrap; }
 a.back figure { display: flex; justify-content: center; align-items: center; width: 36px; height: 36px; border-radius: 50%; background-image: linear-gradient(#64E1E7, #994AFC); }
 a.back img { width: 30px; height: 30px; position: relative; z-index: 1; }
-a.back:hover span { width: 100px; }
+a.back:hover span { width: 130px; }
 
 form { margin-bottom: 80px; }
 form li { position: relative; margin: 75px 0; }
@@ -360,3 +360,17 @@ form input.balloon:invalid + label, form textarea.balloon:invalid + label { colo
 @media all and (max-width: 576px) { body .contact-infos { width: auto; }
   body .contact-infos img { width: 20px; height: 20px; margin-right: 10px; }
   body .contact-infos a { font-size: 13px; } }
+.cv-page { margin-top: 60px; }
+.cv-page h3 { font-size: 38px; letter-spacing: 3px; display: flex; justify-content: flex-start; align-items: flex-end; margin-bottom: 30px; }
+.cv-page h4 { font-size: 28px; letter-spacing: 2px; display: flex; justify-content: flex-start; align-items: center; }
+.cv-page h4 img { width: 20px; margin-right: 20px; margin-left: 5px; }
+.cv-page h5 { font-family: futura-pt, sans-serif; font-weight: 100; font-size: 24px; letter-spacing: 3px; margin: 10px 0 30px 50px; }
+.cv-page .expe h3 img { width: 30px; height: 35px; margin-right: 15px; margin-bottom: 3px; }
+.cv-page .educ { margin-top: 50px; }
+.cv-page .educ h3 img { width: 45px; margin-right: 17px; margin-left: -22px; }
+
+ul.small-list li { padding-left: 70px; padding-bottom: 15px; line-height: 22px; }
+ul.small-list li:before { content: ""; width: 8px; height: 8px; margin-left: -25px; margin-right: 10px; background-image: url("/assets/images/icons/losange-s.svg"); background-repeat: no-repeat; background-size: 30px 30px; background-size: contain; display: inline-block; }
+
+ul.big-list li { padding-left: 30px; padding-bottom: 15px; line-height: 22px; display: flex; justify-content: flex-start; align-items: flex-start; }
+ul.big-list li:before { content: ""; width: 20px; height: 20px; margin-left: 7px; margin-right: 20px; margin-top: 5px; background-image: url("/assets/images/icons/losange-l.svg"); background-repeat: no-repeat; background-size: 30px 30px; background-size: contain; display: inline-block; }
