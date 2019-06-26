@@ -42,3 +42,13 @@
 }
 
 //first class-name contained,  class-name contained
+
+
+
+@media all and (max-width: $mobile){
+    body{
+        .no-mobile{
+            display: none;
+        }
+    }
+}

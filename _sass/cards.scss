@@ -121,10 +121,25 @@
 @media all and (max-width: $mobile){
 
     body{
+
+        .row:nth-child(even) .card:after,
+        .row:nth-child(odd) .card:after{
+            padding-bottom: 45%!important;
+        }
+
         .card{
             h3{
-                padding-top: 5px;
-                padding-left: 10px;
+                padding-top: 2px;
+                padding-left: 5px;
+            }
+            .card-content{
+                .card-desc{
+                    padding: 17px 12px;
+                }
+            }
+            label{
+                bottom: 13px;
+                right: 15px;
             }
         }
     }
