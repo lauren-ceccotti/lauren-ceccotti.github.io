@@ -36,15 +36,10 @@ audio:not([controls]) { display: none; height: 0; }
 /** 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using `em` units. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
 html { font-size: 100%; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */ -ms-text-size-adjust: 100%; /* 2 */ }
 
-a { text-decoration: none; color: inherit; }
+a { text-decoration: none; color: inherit; outline: 0; }
 
-/** Address `outline` inconsistency between Chrome and other browsers. */
-a:focus { outline: thin dotted; }
+a:hover, a:active, a:focus { outline: 0; }
 
-/** Improve readability when focused and also mouse hovered in all browsers. */
-a:active, a:hover { outline: 0; }
-
-/** 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3. 2. Improve image quality when scaled in IE 7. */
 img { border: 0; /* 1 */ -ms-interpolation-mode: bicubic; /* 2 */ }
 
 /** Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11. */
@@ -162,6 +157,8 @@ body.skills { background-image: linear-gradient(#994AFC, #B446C4, #D0438D, #EC40
 body.skills .losange, body.skills .fancy-line { background: #994AFC; }
 body.about { background-image: linear-gradient(#DAF100, #B3EB4B, #87E5A2, #64E1E7); }
 body.about .losange, body.about .fancy-line { background: #DAF100; }
+body.about p a { color: #677200; }
+body.about p a:hover { color: #BBB; }
 body.contact { background-image: linear-gradient(#EC4056, #E48434, #DEC117, #DAF100); }
 body.contact .losange, body.contact .fancy-line { background: #EC4056; }
 
@@ -360,17 +357,3 @@ form input.balloon:invalid + label, form textarea.balloon:invalid + label { colo
 @media all and (max-width: 576px) { body .contact-infos { width: auto; }
   body .contact-infos img { width: 20px; height: 20px; margin-right: 10px; }
   body .contact-infos a { font-size: 13px; } }
-.cv-page { margin-top: 60px; }
-.cv-page h3 { font-size: 38px; letter-spacing: 3px; display: flex; justify-content: flex-start; align-items: flex-end; margin-bottom: 30px; }
-.cv-page h4 { font-size: 28px; letter-spacing: 2px; display: flex; justify-content: flex-start; align-items: center; }
-.cv-page h4 img { width: 20px; margin-right: 20px; margin-left: 5px; }
-.cv-page h5 { font-family: futura-pt, sans-serif; font-weight: 100; font-size: 24px; letter-spacing: 3px; margin: 10px 0 30px 50px; }
-.cv-page .expe h3 img { width: 30px; height: 35px; margin-right: 15px; margin-bottom: 3px; }
-.cv-page .educ { margin-top: 50px; }
-.cv-page .educ h3 img { width: 45px; margin-right: 17px; margin-left: -22px; }
-
-ul.small-list li { padding-left: 70px; padding-bottom: 15px; line-height: 22px; }
-ul.small-list li:before { content: ""; width: 8px; height: 8px; margin-left: -25px; margin-right: 10px; background-image: url("/assets/images/icons/losange-s.svg"); background-repeat: no-repeat; background-size: 30px 30px; background-size: contain; display: inline-block; }
-
-ul.big-list li { padding-left: 30px; padding-bottom: 15px; line-height: 22px; display: flex; justify-content: flex-start; align-items: flex-start; }
-ul.big-list li:before { content: ""; width: 20px; height: 20px; margin-left: 7px; margin-right: 20px; margin-top: 5px; background-image: url("/assets/images/icons/losange-l.svg"); background-repeat: no-repeat; background-size: 30px 30px; background-size: contain; display: inline-block; }

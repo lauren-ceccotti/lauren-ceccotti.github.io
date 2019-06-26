@@ -39,6 +39,12 @@ body{
         // a:hover, a.current{
         //     color: darken($yellow, $dark);
         // }
+        p a{
+            color: darken($yellow, 25);
+            &:hover{
+                color: $link-hover;
+            }
+        }
     }
     &.contact{
         background-image: linear-gradient(#EC4056, #E48434, #DEC117, #DAF100);

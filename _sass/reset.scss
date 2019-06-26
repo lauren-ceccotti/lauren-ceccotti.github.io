@@ -131,31 +131,13 @@ html {
 a {
     text-decoration: none;
     color: inherit;
-}
-
-
-
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
-
-a:focus {
-    outline: thin dotted;
-}
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
-
-a:active,
-a:hover {
     outline: 0;
 }
 
-/**
- * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
- * 2. Improve image quality when scaled in IE 7.
- */
+a:hover, a:active, a:focus {
+  outline: 0;
+}
+
 
 img {
     border: 0; /* 1 */
