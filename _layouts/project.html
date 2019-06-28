@@ -26,13 +26,25 @@
 
 				<div class="content">
                     <article>
-						<p>
+						<div class="">
+							<div class="">
+								<h4>{{ page.type | capitalize }}</h4>
+								<h4>{{ page.release }} - {{ page.company | capitalize }}</h4>
+							</div>
+							<div class="">
+								<ul>
+								  {% for item in page.roles %}
+									<li>{{ item }}</li>
+								  {% endfor %}
+								</ul>
 
-							<h4> Type de projet: <small>{{ page.type | capitalize }}</small></h4>
-	                        <h5>{{ page.compagny | capitalize }}</h5>
-
-						</p>
-
+								<ul>
+								  {% for item in page.tools %}
+									<li><em>{{ item }}</em></li>
+								  {% endfor %}
+								</ul>
+							</div>
+						</div>
                     </article>
 					{{ content }}
 				</div>
