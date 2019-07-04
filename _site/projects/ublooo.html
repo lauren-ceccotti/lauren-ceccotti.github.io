@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Carnet de bord</title>
+    <title>Ublooo</title>
     <link rel="stylesheet" href="https://use.typekit.net/pgo6fup.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
 
-<body class="projects logbook">
+<body class="projects ublooo">
 
 	<div class="page-wrapper">
 		<div class="trapezoid"></div>
@@ -79,7 +79,7 @@
 						<div class="losange-box">
 							<div class="losange"></div>
 						</div>
-						<h2>Carnet de bord</h2>
+						<h2>Ublooo</h2>
 					</div>
 					<div class="fancy-line"></div>
 				</div>
@@ -88,7 +88,7 @@
                     <article>
 
 						<h3 class="project-desc">
-							Un widget pour informer les parents sur l'activité scolaire des enfants
+							Refonte du design et de l’ergonomie d’une application de carnets de voyages
 						</h3>
 
 
@@ -98,21 +98,21 @@
 								<div class="">
 									<div class="prez-cat">
 										<h5>Type</h5>
-										<span>Widget</span>
+										<span>Web App</span>
 									</div>
 									<div class="prez-cat">
 										<h5>Devices</h5>
-										<span>Desktop</span>
+										<span>Tablet - Desktop</span>
 									</div>
 								</div>
 								<div class="">
 									<div class="prez-cat">
 										<h5>Release</h5>
-										<span>2016</span>
+										<span>2019</span>
 									</div>
 									<div class="prez-cat">
 										<h5>Company</h5>
-										<span>Open Digital Education</span>
+										<span>Ublooo</span>
 									</div>
 								</div>
 							</div>
@@ -123,11 +123,15 @@
 									<h5>Roles</h5>
 									<ul>
 									  
-										<li>Product thinking</li>
+										<li>UX</li>
+									  
+										<li>User story</li>
 									  
 										<li>Sketching</li>
 									  
-										<li>Visual design & Interaction design</li>
+										<li>Interaction design</li>
+									  
+										<li>Visual Design</li>
 									  
 										<li>Frontend development</li>
 									  
@@ -137,11 +141,11 @@
 									<h5>Tools</h5>
 									<ul>
 									  
-										<li>Moqups</li>
-									  
-										<li>AngularJS</li>
+										<li>AdobeXD</li>
 									  
 										<li>HTML5 / SASS</li>
+									  
+										<li>JQuery</li>
 									  
 									</ul>
 								</div>
@@ -153,135 +157,121 @@
 						
 
 
-
 <article>
 
     <h4>
         Le contexte
     </h4>
     <p>
-        Au sein d’un portail éducatif dont le parti pris fort est son approche sous forme de réseau social,
-        les utilisateurs bénéficient de fonctionnalités différenciées selon leurs profils.
-        <br>Les profils de type corps enseignant ou élèves sont bien sûr mis à l’honneur et disposent
-        d’un maximum de services. Cependant, de nombreux retours utilisateurs évoquent les profils de
-        type parent qui font face à une page d'accueil mal exploitée et trop “vide”.
-        <br>Celà s’explique de manière simple : il n’est pas souhaité que les profils de type parent
-        puissent entrer en relation entre eux, ni avec un certain nombre d’autres profils utilisateurs.
-        Leur réseau est donc restreint, et de ce fait, la page d’accueil dont le rôle principal est de
-        faire remonter l’activité récente du réseau, est trop peu animée.
+        Ublooo est une application web permettant de créer ses propres carnets de voyages
+        comme de trouver l'inspiration en consultant les itinéraires des autres contributeurs.
+        Le site permet aussi d'obtenir directement un devis auprès de spécialistes.
+        <br>
+        Après quelques missions d’intégration de nouvelles fonctionnalités, notamment sur
+        l’interfaces mobile responsive, la mission d’une refonte importante au niveau design
+        et ergonomie m’est confiée. La validation des prototypes sera suivie de la réalisation
+        du chantier front.
     </p>
 
 
     <h4>
-        À l’écoute des utilisateurs et des clients
+        Le diagnostique
     </h4>
     <p>
-        Un des souhaits formulés par les clients est d'accéder directement depuis le portail à
-        une sélection des données du service national de vie scolaire, qui est un produit externe.
-        <br>Un tel outil inciterait plus les parents à se connecter au portail qui deviendrait le point
-        de centralisation des informations concernant la scolarité de leurs enfants.
-        Il serait disponible à la fois pour les parents mais aussi les élèves aux même, leur fournissant
-        un récapitulatif de leur activité.
+        Pour améliorer l'expérience utilisateur, les deux intentions majeures sont d’une part
+        d’épurer le layout, faciliter la navigation en améliorant la prise en main des outils,
+        et, d’autre part de faire la part belle aux images en habillant le site avec une sélection
+        des plus meilleures photographies des carnets.
+        <br>
+        Le changement de structure sera répercuté sur l’ensembles des pages qui seront
+        à harmoniser sur la base de ce nouveau design. Seuls quelques sections et composants
+        transverses ne subiront pas d’évolutions.
     </p>
+    <p>
+        Répondre à l’ensemble des demandes implique de :
+    </p>
+    <ul>
+        <li>
+            Simplifier les call to action de la homepage
+        </li>
+        <li>
+            Ne plus perdre le contexte lors d’une inscription / connexion
+        </li>
+        <li>
+            Améliorer le parcours de création d’un carnet en rendant l’action plus accessible
+        </li>
+        <li>
+            Revoir le menu général et la navigation dans les pages institutionnelles
+        </li>
+        <li>
+            Concevoir de manière générale des effets de transitions et micro interactions
+            afin qu’elles apportent du sens à la navigation
+        </li>
+    </ul>
+
+
+    <h4>
+        Déroulement des opérations
+    </h4>
+    <p>
+        Après avoir circonscrit le périmètre du chantier au travers d’un document rédigé et ajusté
+        en collaboration avec le client. Les potentiels points de difficultés y sont anticipés,
+        les objectifs fixés, et les limites établies.
+        <br>
+        La phase de design commence, ponctuée de micro réunions afin de valider ou ré-ajuster
+        la progression à chaque itération. Le prototypage interactif permet au client d'apprécier
+        précisément la mesure des transformations et peut se projeter sans risque sur le rendu final.
+    </p>
+
+    <p>
+        Une fois le design validé, la partie développement front démarre en conservant le même rythme de
+        supervision afin de pouvoir palier à toute difficulté inattendue.
+        <br>
+        L’avantage pour moi est de connaître à l’avance quels sont les aspects du design
+        que j’ai conçu qui nécessitent quelques délicatesses techniques.
+    </p>
+
 </article>
 
+
+///// exemples
+
+
 <figure class="">
-    <img src="/assets/images/projects/logbook/maquette.png" alt="">
+    <img src="/assets/images/projects/ublooo/groups-sketches.png" alt="">
 </figure>
 
-<article>
 
-    <h4>
-        Les contraintes
-    </h4>
-    <p>
-        La page d’accueil est organisée en deux sections : La Timeline sur laquelle des billets
-        se succèdent témoignant de l’activité du réseau de l’utilisateur, et les Widgets qui sont
-        une suite de petits encarts flottant en colonne, et offrant diverses fonctionnalitées.
-    </p>
 
+<article class="">
 
     <div class="two-cols left">
-
         <div class="">
             <p>
-                Après évaluation des contraintes techniques qui consisteront à aspirer le flux xml de données
-                du service externe pour le restituer dans l’interface du portail, c’est la décision de concevoir
-                le nouvel outils sous la forme du Widget l’emporte.
+                Nommer les groupes personnalisables par l’utilisateurs
+                “Favoris de partage” permet d’indiquer de manière simple quelle est la
+                fonction de la section.
             </p>
             <p>
-                La largeur dédié à la colonne de ces composants est fixée à 260px ce qui limite de façon conséquente
-                l’espace disponible, sachant qu’il faut conserver aussi de l’espace sur la hauteur et garder visibles
-                les autres widgets.
-            </p>
-            <p>
-                Une autre donnée à prendre en compte est la gestion de l’abondance : le composant
-                doit à lui seul s’adapter au cas où le parent ait plusieurs enfants, et permettre la
-                consultation de l’activité pour chacun d’entre eux.
+                Le parti est pris de fusionner la navigation et la recherche dans
+                le même module. Les icônes représentent les nouvelles sections de l’Annuaire.
+                <br>
+                Ce composant polymorphe est conçu pour s’adapter
+                à la fois à l’affichage desktop et à l’affichage mobile.
             </p>
         </div>
 
-
-        <div class="media media-logbook-scroll">
+        <div class="media media-group-share">
             <video width="100%" preload="auto" autoplay="true" loop="true">
-                <source src="/assets/images/projects/logbook/logbook-scroll.mp4" type="video/mp4" />
-                <source src="/assets/images/projects/logbook/logbook-scroll.ogv" type="video/ogv" />
-                <source src="/assets/images/projects/logbook/logbook-scroll.webm" type="video/webm" />
+                <source src="/assets/images/projects/ublooo/group-share-mobile.mp4" type="video/mp4" />
+                <source src="/assets/images/projects/ublooo/group-share-mobile.ogv" type="video/ogv" />
+                <source src="/assets/images/projects/ublooo/group-share-mobile.webm" type="video/webm" />
                 Oooups ! there should be a video here !
             </video>
         </div>
     </div>
 
-
-    <h4>
-        Raisonnement et réponses apportées
-    </h4>
-    <p>
-        Pour aborder les contraintes d’espace il me paraît pertinent
-        de gérer la composition comme si nous avions affaire à un device mobile et donc de rechercher
-        de l’inspiration de ce côté là.
-        <br>Les catégories d’informations sont limités à cinq :
-    </p>
-    <ul>
-        <li>Absences</li>
-        <li>Retards</li>
-        <li>Notes</li>
-        <li>Devoirs</li>
-        <li>Compétences</li>
-    </ul>
-
-    <p>
-        Afin de simplifier le premier niveau de lecture, une vue résumée présente
-        pour chaque catégorie, la dernière information en date. Au clic, les 5 dernières
-        informations de cette catégorie sont présentées dans une lightbox. L’utilisateur a
-        la possibilité depuis cette étape d’accéder au service externe afin de consulter
-        l'intégralité des informations.
-    </p>
-
-    <div class="media media-logbook">
-        <video width="100%" preload="auto" autoplay="true" loop="true">
-            <source src="/assets/images/projects/logbook/logbook.mp4" type="video/mp4" />
-            <source src="/assets/images/projects/logbook/logbook.ogv" type="video/ogv" />
-            <source src="/assets/images/projects/logbook/logbook.webm" type="video/webm" />
-            Oooups ! there should be a video here !
-        </video>
-    </div>
-
-    <p>
-        En entête, un système d’onglets scrollable à l’horizontale permet d’ajouter
-        autant d’enfants qu’il est possible d’en avoir.
-    </p>
-
-    <p>
-        Le travail iconographique permet de reconnaître facilement à quelle catégorie
-        correspondent les informations, et le travail de déclinaison des couleurs, de s’adapter
-        dynamiquement à la couleur secondaire du thème de l’instance du portail.
-    </p>
-
 </article>
-<figure class="">
-    <img src="/assets/images/projects/logbook/desktop.png" alt="">
-</figure>
 
 					</div>
 				</div>
