@@ -22,6 +22,29 @@ h2{
     letter-spacing: 5px;
 }
 
+h3.project-desc{
+    margin: 25px auto 100px;
+    font-size: 35px;
+    letter-spacing: 3px;
+    line-height: 55px;
+    text-align: center;
+    color: $medium-grey;
+}
+h4{
+    font-family: futura-pt, sans-serif;
+    margin: 45px auto 20px;
+    font-size: 27px;
+    letter-spacing: 3px;
+    line-height: 42px;
+    color: $medium-grey;
+}
+h5{
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: $main-text;
+}
+
 .card {
     h3{
         font-family: futura-pt, sans-serif;
@@ -84,7 +107,34 @@ p, span, article a, article li{
 article a{
     //attention cards
 }
+.content-area {
+    ul{
+        margin: 15px 15px 20px;
+    }
+    li:before{
+        content: "◆";
+        font-size: 14px;
+        float: left;
+        line-height: 30px;
+        margin-right: 8px;
+    }
+    p{
+        margin: 30px 0;
+    }
+}
 
+.projects{
+    figure{
+        background: $blue;
+        & > img{
+            width: 100%;
+            //max-width: 900px;
+            max-width: 1600px;
+            margin: 60px auto;
+            display: block;
+        }
+    }
+}
 
 @media all and (max-width: $tablet){
 
@@ -114,10 +164,19 @@ article a{
             }
         }
 
-        p, p a{
+        p, p a, span, article a, article li{
             font-size: 16px;
             letter-spacing: 1px;
             line-height: 28px;
+        }
+        .content-area {
+            li{
+                line-height: 30px;
+            }
+            li:before{
+                font-size: 14px;
+                line-height: 30px;
+            }
         }
     }
 }
@@ -158,6 +217,17 @@ article a{
                 font-size: 12px;
                 letter-spacing: 2px;
             }
+        }
+
+        h3.project-desc{
+            margin: 25px auto 70px;
+            font-size: 27px;
+            letter-spacing: 2px;
+            line-height: 50px;
+        }
+        h4{
+            font-size: 22px;
+            line-height: 32px;
         }
     }
 }

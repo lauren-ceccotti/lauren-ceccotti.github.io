@@ -1,0 +1,148 @@
+---
+name: logbook
+cover: maquette.png
+title: Carnet de bord
+desc: Un widget pour informer les parents sur l'activité scolaire des enfants
+type: Widget
+devices: Desktop
+release: 2016
+company: Open Digital Education
+roles :
+    - Product thinking
+    - Sketching
+    - Visual design & Interaction design
+    - Frontend developpement
+tools :
+    - Moqups
+    - AngularJS
+    - HTML5 / SASS
+---
+
+{% assign pic-path = site.data.paths.pj-pic | append: "logbook/" %}
+
+
+
+<article>
+
+    <h4>
+        Le contexte
+    </h4>
+    <p>
+        Au sein d’un portail éducatif dont le parti pris fort est son approche sous forme de réseau social,
+        les utilisateurs bénéficient de fonctionnalités différenciées selon leurs profils.
+        <br>Les profils de type corps enseignant ou élèves sont bien sûr mis à l’honneur et disposent
+        d’un maximum de services. Cependant, de nombreux retours utilisateurs évoquent les profils de
+        type parent qui font face à une page d'accueil mal exploitée et trop “vide”.
+        <br>Celà s’explique de manière simple : il n’est pas souhaité que les profils de type parent
+        puissent entrer en relation entre eux, ni avec un certain nombre d’autres profils utilisateurs.
+        Leur réseau est donc restreint, et de ce fait, la page d’accueil dont le rôle principal est de
+        faire remonter l’activité récente du réseau, est trop peu animée.
+    </p>
+
+
+    <h4>
+        À l’écoute des utilisateurs et des clients
+    </h4>
+    <p>
+        Un des souhaits formulés par les clients est d'accéder directement depuis le portail à
+        une sélection des données du service national de vie scolaire, qui est un produit externe.
+        <br>Un tel outil inciterait plus les parents à se connecter au portail qui deviendrait le point
+        de centralisation des informations concernant la scolarité de leurs enfants.
+        Il serait disponible à la fois pour les parents mais aussi les élèves aux même, leur fournissant
+        un récapitulatif de leur activité.
+    </p>
+</article>
+
+<figure class="">
+    <img src="{{pic-path}}maquette.png" alt="">
+</figure>
+
+<article>
+
+    <h4>
+        Les contraintes
+    </h4>
+    <p>
+        La page d’accueil est organisée en deux sections : La Timeline sur laquelle des billets
+        se succèdent témoignant de l’activité du réseau de l’utilisateur, et les Widgets qui sont
+        une suite de petits encarts flottant en colonne, et offrant diverses fonctionnalitées.
+    </p>
+
+
+    <div class="two-cols left">
+        <p>
+            Après évaluation des contraintes techniques qui consisteront à aspirer le flux xml de données
+            du service externe pour le restituer dans l’interface du portail, c’est la décision de concevoir
+            le nouvel outils sous la forme du Widget l’emporte.
+            <br>
+            <br>
+            La largeur dédié à la colonne de ces composants est fixée à 260px ce qui limite de façon conséquente
+            l’espace disponible, sachant qu’il faut conserver aussi de l’espace sur la hauteur et garder visibles
+            les autres widgets.
+            <br>
+            <br>
+            Une autre donnée à prendre en compte est la gestion de l’abondance : le composant
+            doit à lui seul s’adapter au cas où le parent ait plusieurs enfants, et permettre la
+            consultation de l’activité pour chacun d’entre eux.
+        </p>
+
+        <div class="media media-logbook-scroll">
+            <video width="100%" preload="auto" autoplay="true" loop="true">
+                <source src="{{pic-path}}logbook-scroll.mp4" type="video/mp4" />
+                <source src="{{pic-path}}logbook-scroll.ogv" type="video/ogv" />
+                <source src="{{pic-path}}logbook-scroll.webm" type="video/webm" />
+                Oooups ! there should be a video here !
+            </video>
+        </div>
+    </div>
+
+
+    <h4>
+        Raisonnement et réponses apportées
+    </h4>
+    <p>
+        Pour aborder les contraintes d’espace il me paraît pertinent
+        de gérer la composition comme si nous avions affaire à un device mobile et donc de rechercher
+        de l’inspiration de ce côté là.
+        <br>Les catégories d’informations sont limités à cinq :
+    </p>
+    <ul>
+        <li>Absences</li>
+        <li>Retards</li>
+        <li>Notes</li>
+        <li>Devoirs</li>
+        <li>Compétences</li>
+    </ul>
+
+    <p>
+        Afin de simplifier le premier niveau de lecture, une vue résumée présente
+        pour chaque catégorie, la dernière information en date. Au clic, les 5 dernières
+        informations de cette catégorie sont présentées dans une lightbox. L’utilisateur a
+        la possibilité depuis cette étape d’accéder au service externe afin de consulter
+        l'intégralité des informations.
+    </p>
+
+    <div class="media media-logbook">
+        <video width="100%" preload="auto" autoplay="true" loop="true">
+            <source src="{{pic-path}}logbook.mp4" type="video/mp4" />
+            <source src="{{pic-path}}logbook.ogv" type="video/ogv" />
+            <source src="{{pic-path}}logbook.webm" type="video/webm" />
+            Oooups ! there should be a video here !
+        </video>
+    </div>
+
+    <p>
+        En entête, un système d’onglets scrollable à l’horizontale permet d’ajouter
+        autant d’enfants qu’il est possible d’en avoir.
+    </p>
+
+    <p>
+        Le travail iconographique permet de reconnaître facilement à quelle catégorie
+        correspondent les informations, et le travail de déclinaison des couleurs, de s’adapter
+        dynamiquement à la couleur secondaire du thème de l’instance du portail.
+    </p>
+
+</article>
+<figure class="">
+    <img src="{{pic-path}}desktop.png" alt="">
+</figure>

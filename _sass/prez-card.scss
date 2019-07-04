@@ -1,0 +1,67 @@
+.prez-card{
+    box-shadow: 0px 0px 12px 5px rgba(black, 0.1);
+    padding: 60px;
+    margin: 0 auto 110px;
+    color: $light-grey;
+
+    .prez-top{
+        display: flex;
+        margin-bottom: 70px;
+    }
+    .prez-top, .prez-bottom{
+        & > div{
+            width: 100%;
+        }
+    }
+    .prez-cat{
+        //border: 1px solid cadetblue;
+        margin-bottom: 40px;
+        &:last-of-type{
+            //border: 1px solid brown;
+            margin-bottom: 0;
+        }
+    }
+
+    h5{
+        margin-bottom: 8px;
+    }
+
+    li{
+        display: inline-block;
+        line-height: normal;
+        &:after{
+            content: " - ";
+        }
+        &:last-child{
+            &:after{
+                content: "";
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: $mobile){
+
+    body{
+        .prez-card{
+            padding: 45px;
+            margin: 0 auto 80px;
+            .prez-top{
+                display: block;
+                margin-bottom: 40px;
+            }
+            .prez-cat{
+                margin-bottom: 20px;
+                &:last-of-type{
+                    margin-bottom: 20px;
+                }
+            }
+            .prez-bottom .prez-cat{
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

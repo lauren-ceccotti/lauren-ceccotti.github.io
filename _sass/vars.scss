@@ -25,8 +25,11 @@ $card-padding: 20px;
 $dark: 20;
 
 $main-text: #333;
-$link-hover: #BBB;
-$lightest-grey: #f9f9f9;
+$medium-grey: #777;
+$light-grey: #BBB;
+$lightest-grey: #f5f5f5;
+
+$link-hover: $light-grey;
 
 $page-color: #FFF;
 

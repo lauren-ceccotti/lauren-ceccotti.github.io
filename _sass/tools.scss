@@ -44,6 +44,44 @@
 //first class-name contained,  class-name contained
 
 
+.two-cols{
+    display: flex;
+    margin: 30px 0;
+    p{
+        margin: 0!important;
+    }
+    .media{
+        flex-shrink: 0;
+        margin: 10px 0;
+    }
+    &.left{
+        p{
+            margin-right: 50px!important;
+        }
+    }
+    &.right{
+        p{
+            margin-left: 50px!important;
+        }
+    }
+}
+
+
+
+// .half{
+//     width: 50%;
+// }
+// .left{
+//     float: left;
+// }
+// .right{
+//     float: right;
+// }
+// .o-hd{
+//     overflow: hidden;
+// }
+
+
 
 @media all and (max-width: $mobile){
     body{

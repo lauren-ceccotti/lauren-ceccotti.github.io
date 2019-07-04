@@ -26,27 +26,62 @@
 
 				<div class="content">
                     <article>
-						<div class="">
-							<div class="">
-								<h4>{{ page.type | capitalize }}</h4>
-								<h4>{{ page.release }} - {{ page.company | capitalize }}</h4>
-							</div>
-							<div class="">
-								<ul>
-								  {% for item in page.roles %}
-									<li>{{ item }}</li>
-								  {% endfor %}
-								</ul>
 
-								<ul>
-								  {% for item in page.tools %}
-									<li><em>{{ item }}</em></li>
-								  {% endfor %}
-								</ul>
+						<h3 class="project-desc">
+							{{ page.desc }}
+						</h3>
+
+
+						<div class="prez-card">
+
+							<div class="prez-top">
+								<div class="">
+									<div class="prez-cat">
+										<h5>Type</h5>
+										<span>{{ page.type }}</span>
+									</div>
+									<div class="prez-cat">
+										<h5>Devices</h5>
+										<span>{{ page.devices }}</span>
+									</div>
+								</div>
+								<div class="">
+									<div class="prez-cat">
+										<h5>Release</h5>
+										<span>{{ page.release }}</span>
+									</div>
+									<div class="prez-cat">
+										<h5>Company</h5>
+										<span>{{ page.company }}</span>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="prez-bottom">
+								<div class="prez-cat">
+									<h5>Roles</h5>
+									<ul>
+									  {% for item in page.roles %}
+										<li>{{ item }}</li>
+									  {% endfor %}
+									</ul>
+								</div>
+								<div class="prez-cat">
+									<h5>Tools</h5>
+									<ul>
+									  {% for item in page.tools %}
+										<li>{{ item }}</li>
+									  {% endfor %}
+									</ul>
+								</div>
 							</div>
 						</div>
+
                     </article>
-					{{ content }}
+					<div class="content-area">
+						{{ content }}
+					</div>
 				</div>
 
 				{% include navigation-links.html %}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ v2.0-modified | 20110126 License: none (public domain)
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
@@ -115,6 +116,12 @@ textarea { resize: vertical; }
 [class^='align-'].y-sa, [class*=' align-'].y-sa { align-items: space-around; }
 [class^='align-'].y-c, [class*=' align-'].y-c { align-items: center; }
 
+.two-cols { display: flex; margin: 30px 0; }
+.two-cols p { margin: 0 !important; }
+.two-cols .media { flex-shrink: 0; margin: 10px 0; }
+.two-cols.left p { margin-right: 50px !important; }
+.two-cols.right p { margin-left: 50px !important; }
+
 @media all and (max-width: 576px) { body .no-mobile { display: none; } }
 body { font-family: futura-pt, sans-serif; color: #333; }
 
@@ -123,6 +130,12 @@ h1, h2, h3, h4, h5 { font-family: futura-pt-bold, sans-serif; }
 h1 { font-size: 74px; font-weight: bold; letter-spacing: 5px; margin-bottom: 6vh; }
 
 h2 { font-size: 55px; font-weight: bold; letter-spacing: 5px; }
+
+h3.project-desc { margin: 25px auto 100px; font-size: 35px; letter-spacing: 3px; line-height: 55px; text-align: center; color: #777; }
+
+h4 { font-family: futura-pt, sans-serif; margin: 45px auto 20px; font-size: 27px; letter-spacing: 3px; line-height: 42px; color: #777; }
+
+h5 { font-size: 14px; letter-spacing: 4px; text-transform: uppercase; color: #333; }
 
 .card h3 { font-family: futura-pt, sans-serif; font-size: 18px; letter-spacing: 5px; line-height: 25px; text-align: left; }
 .card label { font-family: futura-pt, sans-serif; font-size: 13px; letter-spacing: 2px; text-align: right; line-height: normal; }
@@ -138,21 +151,32 @@ nav.links h5 { font-family: futura-pt, sans-serif; text-align: center; line-heig
 
 p, span, article a, article li { font-size: 18px; letter-spacing: 1px; line-height: 30px; }
 
+.content-area ul { margin: 15px 15px 20px; }
+.content-area li:before { content: "◆"; font-size: 14px; float: left; line-height: 30px; margin-right: 8px; }
+.content-area p { margin: 30px 0; }
+
+.projects figure { background: #74B1ED; }
+.projects figure > img { width: 100%; max-width: 1600px; margin: 60px auto; display: block; }
+
 @media all and (max-width: 1024px) { body h1 { font-size: 60px; }
   body h2 { font-size: 43px; letter-spacing: 3px; line-height: 60px; text-align: center; }
   body nav a, body .nav a { font-size: 20px; }
   body nav.main-nav a { font-size: 35px; letter-spacing: 12px; }
-  body p, body p a { font-size: 16px; letter-spacing: 1px; line-height: 28px; } }
+  body p, body p a, body span, body article a, body article li { font-size: 16px; letter-spacing: 1px; line-height: 28px; }
+  body .content-area li { line-height: 30px; }
+  body .content-area li:before { font-size: 14px; line-height: 30px; } }
 @media all and (max-width: 1024px) { body nav.main-nav a { font-size: 30px; letter-spacing: 6px; }
   body .cross { font-size: 80px; }
   body .cross:after { content: "+"; } }
 @media all and (max-width: 576px) { body .card h3 { font-size: 14px; letter-spacing: 3px; line-height: 20px; }
-  body .card label { font-size: 12px; letter-spacing: 2px; } }
+  body .card label { font-size: 12px; letter-spacing: 2px; }
+  body h3.project-desc { margin: 25px auto 70px; font-size: 27px; letter-spacing: 2px; line-height: 50px; }
+  body h4 { font-size: 22px; line-height: 32px; } }
 body { background-repeat: no-repeat; background-attachment: fixed; }
 body.home { background-image: linear-gradient(to bottom, #994AFC, #64E1E7, #DAF100, #EC4056); }
 body.projects, body.project { background-image: linear-gradient(#64E1E7, #74B1ED, #8580F4, #994AFC); }
 body.projects .losange, body.projects .fancy-line, body.project .losange, body.project .fancy-line { background: #64E1E7; }
-body.projects section, body.project section { background: rgba(100, 225, 231, 0.15); }
+body.projects section, body.project section { background: #f5f5f5; }
 body.skills { background-image: linear-gradient(#994AFC, #B446C4, #D0438D, #EC4056); }
 body.skills .losange, body.skills .fancy-line { background: #994AFC; }
 body.about { background-image: linear-gradient(#DAF100, #B3EB4B, #87E5A2, #64E1E7); }
@@ -161,6 +185,54 @@ body.about p a { color: #677200; }
 body.about p a:hover { color: #BBB; }
 body.contact { background-image: linear-gradient(#EC4056, #E48434, #DEC117, #DAF100); }
 body.contact .losange, body.contact .fancy-line { background: #EC4056; }
+
+.purple-bg { background-color: #994AFC; }
+
+.indigo-bg { background-color: #8580F4; }
+
+.blue-bg { background-color: #74B1ED; }
+
+.turquoise-bg { background-color: #64E1E7; }
+
+.green-bg { background-color: #87E5A2; }
+
+.grass-bg { background-color: #B3EB4B; }
+
+.yellow-bg { background-color: #DAF100; }
+
+.gold-bg { background-color: #DEC117; }
+
+.orange-bg { background-color: #E48434; }
+
+.red-bg { background-color: #EC4056; }
+
+.pink-bg { background-color: #D0438D; }
+
+.fushia-bg { background-color: #B446C4; }
+
+.purple-c { color: #994AFC; }
+
+.indigo-c { color: #8580F4; }
+
+.blue-c { color: #74B1ED; }
+
+.turquoise-c { color: #64E1E7; }
+
+.green-c { color: #87E5A2; }
+
+.grass-c { color: #B3EB4B; }
+
+.yellow-c { color: #DAF100; }
+
+.gold-c { color: #DEC117; }
+
+.orange-c { color: #E48434; }
+
+.red-c { color: #EC4056; }
+
+.pink-c { color: #D0438D; }
+
+.fushia-c { color: #B446C4; }
 
 #logo { display: block; position: relative; z-index: 100; width: 40px; cursor: pointer; transform: scale(1); transition: all, 0.5s; backface-visibility: hidden; -webkit-font-smoothing: subpixel-antialiased; }
 #logo .st0, #logo .st1, #logo .st2, #logo .st3 { fill: none; stroke-width: 15; stroke-linejoin: round; stroke-miterlimit: 10; }
@@ -240,7 +312,7 @@ p { margin: auto; }
 
 .card-content { position: absolute; width: 100%; height: 100%; }
 .card-content img, .card-content .image-filter { display: block; position: absolute; top: 0; left: 0; width: 40%; height: 100%; }
-.card-content img { object-fit: cover; opacity: 0; }
+.card-content img { object-fit: cover; }
 .card-content .image-filter { z-index: 2; background: rgba(100, 225, 231, 0.25); }
 .card-content .card-desc { position: absolute; top: 0; left: 40%; width: 60%; height: 100%; padding: 20px; }
 
@@ -253,6 +325,21 @@ p { margin: auto; }
   body .card h3 { padding-top: 2px; padding-left: 5px; }
   body .card .card-content .card-desc { padding: 17px 12px; }
   body .card label { bottom: 13px; right: 15px; } }
+.prez-card { box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.1); padding: 60px; margin: 0 auto 110px; color: #BBB; }
+.prez-card .prez-top { display: flex; margin-bottom: 70px; }
+.prez-card .prez-top > div, .prez-card .prez-bottom > div { width: 100%; }
+.prez-card .prez-cat { margin-bottom: 40px; }
+.prez-card .prez-cat:last-of-type { margin-bottom: 0; }
+.prez-card h5 { margin-bottom: 8px; }
+.prez-card li { display: inline-block; line-height: normal; }
+.prez-card li:after { content: " - "; }
+.prez-card li:last-child:after { content: ""; }
+
+@media all and (max-width: 576px) { body .prez-card { padding: 45px; margin: 0 auto 80px; }
+  body .prez-card .prez-top { display: block; margin-bottom: 40px; }
+  body .prez-card .prez-cat { margin-bottom: 20px; }
+  body .prez-card .prez-cat:last-of-type { margin-bottom: 20px; }
+  body .prez-card .prez-bottom .prez-cat:last-of-type { margin-bottom: 0; } }
 a { transition: color, 0.5s; }
 
 a:hover, a.current { color: #BBB; }
@@ -313,24 +400,28 @@ a.back:hover span { width: 130px; }
 
 form { margin-bottom: 80px; }
 form li { position: relative; margin: 75px 0; }
-form input.balloon::placeholder, form textarea.balloon::placeholder { letter-spacing: 3px; font-size: 14px; font-family: futura-pt, sans-serif; color: #f9f9f9; transition: all, 0.5s; }
-form input.balloon, form textarea.balloon { display: block; width: 100%; height: 55px; padding: 0 25px; background: #f9f9f9; border: 0; border-radius: 3px; outline: 0; border: 1px solid transparent; transition: all, 0.3s; letter-spacing: 3px; font-size: 14px; color: #333; font-family: futura-pt, sans-serif; }
-form input.balloon + label, form textarea.balloon + label { display: inline-block; position: absolute; height: 55px; top: 0; left: 0; padding: 0 25px; line-height: 55px; color: #EC4056; border-radius: 3px; background: #f9f9f9; transition: all, 0.3s; letter-spacing: 4px; font-size: 14px; }
+form input.balloon::placeholder, form textarea.balloon::placeholder { letter-spacing: 3px; font-size: 14px; font-family: futura-pt, sans-serif; color: #f5f5f5; transition: all, 0.5s; }
+form input.balloon, form textarea.balloon { display: block; width: 100%; height: 55px; padding: 0 25px; background: #f5f5f5; border: 0; border-radius: 3px; outline: 0; border: 1px solid transparent; transition: all, 0.3s; letter-spacing: 3px; font-size: 14px; color: #333; font-family: futura-pt, sans-serif; }
+form input.balloon + label, form textarea.balloon + label { display: inline-block; position: absolute; height: 55px; top: 0; left: 0; padding: 0 25px; line-height: 55px; color: #EC4056; border-radius: 3px; background: #f5f5f5; transition: all, 0.3s; letter-spacing: 4px; font-size: 14px; }
 form input.balloon + label:after, form textarea.balloon + label:after { position: absolute; content: ""; width: 0; height: 0; top: 100%; left: 50%; margin-left: -3px; border-left: 3px solid transparent; border-right: 3px solid transparent; border-top: 3px solid transparent; transition: all, 0.3s; }
-form .active.balloon, form .balloon:focus, form .balloon:active { background: #f9f9f9; border: 1px solid #efefef; }
-form .active.balloon + label, form .balloon:focus + label, form .balloon:active + label { color: #f9f9f9; background: #333; transform: translateY(-65px); }
+form .active.balloon, form .balloon:focus, form .balloon:active { background: #f5f5f5; border: 1px solid #ebebeb; }
+form .active.balloon + label, form .balloon:focus + label, form .balloon:active + label { color: #f5f5f5; background: #333; transform: translateY(-65px); }
 form .active.balloon + label:after, form .balloon:focus + label:after, form .balloon:active + label:after { border-top: 4px solid #333; }
 form textarea.balloon { display: block; height: 150px; padding: 25px; }
-form input.balloon:focus::placeholder, form input.balloon:active::placeholder, form textarea.balloon:focus::placeholder, form textarea.balloon:active::placeholder, form .active.balloon::placeholder { color: #c6c6c6; }
-form input[type=submit] { display: block; height: 70px; width: 50%; margin: auto; padding: 0; border-radius: 3px; background: #333; outline: 0; border: 1px solid transparent; transition: all, 0.5s; cursor: pointer; letter-spacing: 7px; font-size: 17px; font-family: futura-pt, sans-serif; color: #f9f9f9; }
-form input[type=submit]:hover { background: #f9f9f9; color: #333; border: 1px solid #efefef; }
-form input[type=submit]:focus { background: #333; color: #f9f9f9; border: 1px solid transparent; }
+form input.balloon:focus::placeholder, form input.balloon:active::placeholder, form textarea.balloon:focus::placeholder, form textarea.balloon:active::placeholder, form .active.balloon::placeholder { color: #c2c2c2; }
+form input[type=submit] { display: block; height: 70px; width: 50%; margin: auto; padding: 0; border-radius: 3px; background: #333; outline: 0; border: 1px solid transparent; transition: all, 0.5s; cursor: pointer; letter-spacing: 7px; font-size: 17px; font-family: futura-pt, sans-serif; color: #f5f5f5; }
+form input[type=submit]:hover { background: #f5f5f5; color: #333; border: 1px solid #ebebeb; }
+form input[type=submit]:focus { background: #333; color: #f5f5f5; border: 1px solid transparent; }
 form input.balloon:invalid + label, form textarea.balloon:invalid + label { color: #EC4056; }
 
 @media all and (max-width: 576px) { body form input.balloon::placeholder, body form textarea.balloon::placeholder { letter-spacing: 2px; font-size: 13px; }
   body form input.balloon, body form textarea.balloon { letter-spacing: 2px; font-size: 13px; }
   body form input.balloon + label, body form textarea.balloon + label { letter-spacing: 3px; font-size: 13px; }
   body form input[type=submit] { width: 100%; } }
+video { box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1); display: block; }
+
+.media-logbook-scroll { width: 260px; }
+
 .home-content { max-width: 1080px; width: calc(100% - 50px *2 ); margin: auto; }
 .home-content nav.links { margin: 0; margin-left: -10px; }
 
