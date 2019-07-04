@@ -47,7 +47,7 @@
 .two-cols{
     display: flex;
     margin: 30px 0;
-    p{
+    p:first-of-type {
         margin: 0!important;
     }
     .media{
@@ -68,6 +68,7 @@
 
 
 
+
 // .half{
 //     width: 50%;
 // }
@@ -80,6 +81,39 @@
 // .o-hd{
 //     overflow: hidden;
 // }
+
+
+
+@media all and (max-width: $small-tablet){
+    body{
+
+        .no-small-tablet{
+            display: none;
+        }
+
+
+        .two-cols{
+            display: block;
+            margin: 0!important;
+            p:first-of-type {
+                margin: 30px 0!important;
+            }
+            .media{
+                margin: 10px auto;
+            }
+            &.left{
+                p{
+                    margin-right: 0!important;
+                }
+            }
+            &.right{
+                p{
+                    margin-left: 0!important;
+                }
+            }
+        }
+    }
+}
 
 
 

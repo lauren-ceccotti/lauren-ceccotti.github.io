@@ -88,7 +88,7 @@
                     <article>
 
 						<h3 class="project-desc">
-							Un widget pour informer les parents sur l'activité scolaire des enfants
+							Refonte ergonomique et fonctionnelle de l’application de gestion des contacts, et des modules de partage
 						</h3>
 
 
@@ -102,7 +102,7 @@
 									</div>
 									<div class="prez-cat">
 										<h5>Devices</h5>
-										<span>All devices</span>
+										<span>Mobile - Tablet - Desktop</span>
 									</div>
 								</div>
 								<div class="">
@@ -123,13 +123,15 @@
 									<h5>Roles</h5>
 									<ul>
 									  
-										<li>Product thinking</li>
+										<li>User story</li>
 									  
-										<li>Sketching</li>
+										<li>Information architecture</li>
 									  
-										<li>Visual design & Interaction design</li>
+										<li>Prototyping</li>
 									  
-										<li>Frontend developpement</li>
+										<li>Interaction design</li>
+									  
+										<li>Framework architecture</li>
 									  
 									</ul>
 								</div>
@@ -137,9 +139,11 @@
 									<h5>Tools</h5>
 									<ul>
 									  
-										<li>AngularJS</li>
+										<li>Moqups</li>
 									  
-										<li>HTML5 / SASS</li>
+										<li>Jira</li>
+									  
+										<li>HTML5 / CSS3</li>
 									  
 									</ul>
 								</div>
@@ -148,11 +152,252 @@
 
                     </article>
 					<div class="content-area">
-						<article>
+						
+
+
+<article>
+
+    <h4>
+        Le contexte
+    </h4>
     <p>
-        Permettre aux parents de pouvoir suivre l'activité scolaire de leurs enfants via un Widget directement affiché sur la page d'accueil.
+        L’application Annuaire est une pièce essentielle du portail éducatif NEO,
+        surtout sachant que son utilisation est basée sur le concept du réseau social.
+        <br>
+        Cette notion de réseau est donc ici une question centrale.
+        L’annuaire est un des moyens de rendre visible et de faire découvrir son
+        réseau à l’utilisateur, qui peut ainsi le parcourir dans une logique exploratoire.
+        Il y est invité à interagir avec les autres membres, et donc à en développer les usages.
+        <br>
+        Techniquement, le réseau est composé d’individus, eux même répartis dans des groupes
+        prédéfinis par les établissements scolaires. Le tout est régi par un ensemble de
+        règles de communications parfois complexes mais indispensable pour préserver
+        l’intimité des utilisateurs.
+        <br>
+        Cependant l’Annuaire permet seulement de visualiser des individus.
+        L’organisation du réseau apparaît de ce fait très opaque aux utilisateurs
+        lorsqu’ils ont affaire à la notion de groupes, et il devient rapidement laborieux
+        de partager des ressources en masse.
+    </p>
+
+
+    <h4>
+        À l’écoute des utilisateurs et des clients
+    </h4>
+    <p>
+        Après avoir collecté, filtré et organisé dans le backlog
+        les demandes utilisateurs provenants des tickets du support, l'équipe,
+        en accord avec les clients, établit une liste de souhaits pertinente et
+        intelligible. Il faudrait :
+        <br>
+        <br>
+        Dans l'application Annuaire :
+    </p>
+    <ul>
+        <li>
+            Permettre de visualiser les groupes prédéfinis par les établissement scolaires
+        </li>
+        <li>
+            Pouvoir créer des groupes personnalisés afin de faciliter le partage ou la diffusion en masse
+        </li>
+        <li>
+            Améliorer l'outil de recherche
+        </li>
+        <li>
+            Ajouter davantage de précisions sur la fiche d'un profil utilisateur
+        </li>
+    </ul>
+
+    <p>
+        Au moment de partager un contenu :
+    </p>
+
+    <ul>
+        <li>
+            Afficher les groupes personnalisés de l'utilisateur dans la fenêtre contextuelle
+        </li>
+        <li>
+            Pouvoir enregistrer la liste des destinataires comme un nouveau groupe personnalisé
+        </li>
+        <li>
+            Améliorer l’affichage de la liste des destinataires
+        </li>
+    </ul>
+
+</article>
+
+
+<figure class="">
+    <img src="/assets/images/projects/group-share/groups-sketches.png" alt="">
+</figure>
+
+
+<article>
+
+    <h4>
+        Les contraintes
+    </h4>
+    <p>
+        Une des difficultés du chantier, à la fois technique et ergonomique,
+        est la prise en compte de l’existant. Il faut trouver le juste équilibre entre
+        “faire évoluer” et “tout transformer”.
+        <br>
+        Les parcours affectés sont aussi conçus pour la consultation
+        smartphone et tablettes, il faut donc adapter le design en conséquence
+        et gérer aussi les cas où certains outils ne seraient délibérément pas
+        accessibles aux terminaux mobiles.
     </p>
 </article>
+
+    <figure class="">
+        <img src="/assets/images/projects/group-share/personas.png" alt="">
+    </figure>
+
+<article>
+
+    <p>
+        Un autre point important est celui de composants transverses au portail
+        qui seront à faire évoluer dans le cadre du projet. Il faut veiller à éviter
+        que les transformations ne causent des régressions et à cette fin, anticiper
+        intelligemment les scénarii.
+    </p>
+    <p>
+        Le développement de certaines applications a été confié à des sociétés tierces.
+        <br>
+        Ces partenariats ne bénéficiaient pas à l’époque de supervision sur
+        la conception UI et lègue de ce fait une dette technique dont il va falloir
+        s'acquitter dans ce chantier.
+        <br>
+        Les composants utilisés semblent visuellement et fonctionnellement
+        similaires à leurs homologues du framework. Pourtant, ils héritent de
+        trop d'adhérence et les occurrences présentent des divergences incohérentes.
+        <br>
+        Une mission de recensement des composants est lancée, suivie d’un travail
+        d’harmonisation technique afin qu’ils puissent hériter dynamiquement des
+        nouvelles évolutions.
+    </p>
+
+</article>
+
+
+<figure class="">
+    <img src="/assets/images/projects/group-share/features.png" alt="">
+</figure>
+
+
+<article>
+
+    <h4>
+        Traduire les souhaits clients en évolutions concrètes
+    </h4>
+    <p>
+        Satisfaire les demandes retenues implique un nombre bien supérieur
+        d’évolutions que de souhaits formulés.
+        <br>
+        Chaque module est prototypé, les comportement et l'architecture sont documentés
+        afin d’accompagner au mieux les développeurs lorsqu’ils devront imbriquer les
+        composants au framework.
+        <br>
+        Les cas d’abondance et de pénurie sont systématiquement pris en compte dans les chantiers.
+        Une section vide ou un bouton non disponible n'apparaîtront donc pas.
+    </p>
+    <p>
+        L’application Annuaire devient le théâtre central des opérations.
+        Trois sections vont désormais constituer la navigation :
+    </p>
+
+
+    <div class="two-cols left">
+        <div class="">
+            <ul>
+                <li>
+                    les Utilisateurs
+                </li>
+                <li>
+                    Les Groupes
+                </li>
+                <li>
+                    les Favoris de partage
+                </li>
+            </ul>
+
+            <p>
+                Nommer les groupes personnalisables par l’utilisateurs
+                “Favoris de partage” permet d’indiquer de manière simple quelle est la
+                fonction de la section.
+            </p>
+            <p>
+                Le parti est pris de fusionner la navigation et la recherche dans
+                le même module. Les icônes représentent les nouvelles sections de l’Annuaire.
+                <br>
+                Ce composant polymorphe est conçu pour s’adapter
+                à la fois à l’affichage desktop et à l’affichage mobile.
+            </p>
+        </div>
+
+        <div class="media media-group-share">
+            <video width="100%" preload="auto" autoplay="true" loop="true">
+                <source src="/assets/images/projects/group-share/group-share-mobile.mp4" type="video/mp4" />
+                <source src="/assets/images/projects/group-share/group-share-mobile.ogv" type="video/ogv" />
+                <source src="/assets/images/projects/group-share/group-share-mobile.webm" type="video/webm" />
+                Oooups ! there should be a video here !
+            </video>
+        </div>
+    </div>
+
+
+</article>
+
+
+<figure class="">
+    <img src="/assets/images/projects/group-share/annuaire.png" alt="">
+</figure>
+
+
+<article>
+    <p>
+        Les fiches contacts sont retravaillées, ainsi que la vue détaillée d’un individu
+        <br>
+        Un encart d’information apparaît au clic sur une fiche pour y apporter plus de détails.
+    </p>
+</article>
+
+
+<figure class="">
+    <img src="/assets/images/projects/group-share/fav-groups-tablettes.png" alt="">
+</figure>
+
+<article>
+
+    <p>
+        Un fil d’Ariane générique et responsive est conçu de façon à être intégré
+        au framework de composants et pourra être réutilisé dans d’autre types d’applications.
+    </p>
+
+    <div class="media no-small-tablet">
+        <p class="codepen" data-height="400" data-theme-id="light" data-default-tab="result"
+        data-user="AkitaInu99" data-slug-hash="BYMbxM"
+        style="height: 400px; box-sizing: border-box; display: flex; align-items: center;
+        justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
+        data-pen-title="Breadcrumbs">
+          <span>See the Pen <a href="https://codepen.io/AkitaInu99/pen/BYMbxM/">
+          Breadcrumbs</a> by AkitaInu99 (<a href="https://codepen.io/AkitaInu99">@AkitaInu99</a>)
+          on <a href="https://codepen.io">CodePen</a>.</span>
+        </p>
+        <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+    </div>
+
+    <p>
+        Afin que l'utilisateur puisse composer lui même ses favoris,
+        un formulaire aéré est mis en place, chaque étape y est clairement délimitée
+        pour rendre le tri et la sélection fluide et intuitive.
+    </p>
+</article>
+
+
+<figure class="">
+    <img src="/assets/images/projects/group-share/crea-fav.png" alt="">
+</figure>
 
 					</div>
 				</div>
