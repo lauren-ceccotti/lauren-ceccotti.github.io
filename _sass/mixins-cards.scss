@@ -9,6 +9,7 @@
     text-align: center;
     background: $page-color;
     overflow: hidden;
+    transition: all, 0.5s;
 
     &:after {
         content: "";

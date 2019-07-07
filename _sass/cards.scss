@@ -70,6 +70,10 @@
         bottom: 12px;
         right: 15px;
     }
+    &:hover{
+        box-shadow: 3px 3px 6px 1px rgba(black, 0.25);
+        color: darken($turquoise, 35);
+    }
 }
 .card-content {
     @include small-card-content;
