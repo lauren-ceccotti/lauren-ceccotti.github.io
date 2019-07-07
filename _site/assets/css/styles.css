@@ -143,7 +143,7 @@ h4 { font-family: futura-pt, sans-serif; margin: 45px auto 20px; font-size: 27px
 
 h5 { font-size: 14px; letter-spacing: 4px; text-transform: uppercase; color: #333; }
 
-.card h3 { font-family: futura-pt, sans-serif; font-size: 18px; letter-spacing: 5px; line-height: 25px; text-align: left; }
+.card h3 { font-family: futura-pt, sans-serif; font-size: 18px; letter-spacing: 4px; line-height: 25px; text-align: left; }
 .card label { font-family: futura-pt, sans-serif; font-size: 13px; letter-spacing: 2px; text-align: right; line-height: normal; }
 
 nav a, .nav a { font-size: 24px; letter-spacing: 2px; }
@@ -183,6 +183,8 @@ body.home { background-image: linear-gradient(to bottom, #994AFC, #64E1E7, #DAF1
 body.projects, body.project { background-image: linear-gradient(#64E1E7, #74B1ED, #8580F4, #994AFC); }
 body.projects .losange, body.projects .fancy-line, body.project .losange, body.project .fancy-line { background: #64E1E7; }
 body.projects section, body.project section { background: #f5f5f5; }
+body.projects p a, body.project p a { color: #147f84; }
+body.projects p a:hover, body.project p a:hover { color: #BBB; }
 body.skills { background-image: linear-gradient(#994AFC, #B446C4, #D0438D, #EC4056); }
 body.skills .losange, body.skills .fancy-line { background: #994AFC; }
 body.about { background-image: linear-gradient(#DAF100, #B3EB4B, #87E5A2, #64E1E7); }
@@ -311,10 +313,11 @@ p { margin: auto; }
 .row:nth-child(even) .card:first-child .card-content img, .row:nth-child(even) .card:first-child .card-content .image-filter { width: 100%; height: 60%; }
 .row:nth-child(even) .card:first-child .card-content .card-desc { position: absolute; top: 60%; left: 0; width: 100%; height: 40%; }
 
-.card { display: block; position: relative; width: 48%; border-radius: 2px; box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.1); text-align: center; background: #FFF; overflow: hidden; }
+.card { display: block; position: relative; width: 48%; border-radius: 2px; box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.1); text-align: center; background: #FFF; overflow: hidden; transition: all, 0.5s; }
 .card:after { content: ""; display: block; padding-bottom: 46%; }
 .card h3 { padding-top: 10px; padding-left: 15px; }
 .card label { position: absolute; bottom: 12px; right: 15px; }
+.card:hover { box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.4); color: #147f84; }
 
 .card-content { position: absolute; width: 100%; height: 100%; }
 .card-content img, .card-content .image-filter { display: block; position: absolute; top: 0; left: 0; width: 40%; height: 100%; }
@@ -407,6 +410,7 @@ a.back:hover span { width: 130px; }
 
 form { margin-bottom: 80px; }
 form li { position: relative; margin: 75px 0; }
+form li:before { content: ""; display: none; }
 form input.balloon::placeholder, form textarea.balloon::placeholder { letter-spacing: 3px; font-size: 14px; font-family: futura-pt, sans-serif; color: #f5f5f5; transition: all, 0.5s; }
 form input.balloon, form textarea.balloon { display: block; width: 100%; height: 55px; padding: 0 25px; background: #f5f5f5; border: 0; border-radius: 3px; outline: 0; border: 1px solid transparent; transition: all, 0.3s; letter-spacing: 3px; font-size: 14px; color: #333; font-family: futura-pt, sans-serif; }
 form input.balloon + label, form textarea.balloon + label { display: inline-block; position: absolute; height: 55px; top: 0; left: 0; padding: 0 25px; line-height: 55px; color: #EC4056; border-radius: 3px; background: #f5f5f5; transition: all, 0.3s; letter-spacing: 4px; font-size: 14px; }

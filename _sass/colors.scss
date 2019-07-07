@@ -22,6 +22,12 @@ body{
             background: $lightest-grey;
             // background: rgba($turquoise, 0.15);
         }
+        p a{
+            color: darken($turquoise, 35);
+            &:hover{
+                color: $link-hover;
+            }
+        }
     }
     &.skills{
         background-image: linear-gradient($purple, $fushia, $pink, $red);
