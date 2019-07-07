@@ -67,8 +67,8 @@
     }
     label{
         position: absolute;
-        bottom: 20px;
-        right: 25px;
+        bottom: 12px;
+        right: 15px;
     }
 }
 .card-content {
@@ -108,6 +108,10 @@
                         width: 60%!important;
                         height: 100%!important;
                     }
+                }
+                label{
+                    bottom: 20px;
+                    right: 25px;
                 }
             }
 
