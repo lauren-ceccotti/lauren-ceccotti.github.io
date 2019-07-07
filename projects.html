@@ -14,7 +14,7 @@ title: projects
 
         <div class="card-grid">
 
-            {% assign sorted_projects = site.projects | sort:"type" | reverse %}
+            {% assign sorted_projects = site.projects | sort:"weight" %}
 
             {% assign j = 1  %}
 
