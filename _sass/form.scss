@@ -5,6 +5,10 @@ form{
     li{
         position: relative;
         margin: 75px 0;
+        &:before{
+            content: "";
+            display: none;
+        }
     }
 
     // PLACEHOLDER EN MODE INVISIBLE
