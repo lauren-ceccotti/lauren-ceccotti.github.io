@@ -1,0 +1,39 @@
+.skills-list{
+
+    padding: 60px 0 0;
+    border-bottom: 1px solid #e6e6e6;
+
+    h4{
+        margin: 0;
+        margin-left: 20px;
+        color: $main-text;
+        font-family: futura-pt-bold, sans-serif;
+        font-size: 20px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+
+    ul{
+        margin: 15px 0 40px 70px;
+        li{
+            &:before{
+                content: "";
+                display: none;
+            }
+        }
+    }
+    label{
+        font-family: futura-pt, sans-serif;
+        font-size: 17px;
+        letter-spacing: 3px;
+        color: $medium-grey;
+    }
+    .stars{
+        margin: -12px 0 6px 2px;
+        img{
+            width: 12px;
+            margin-right: 5px;
+        }
+    }
+
+}

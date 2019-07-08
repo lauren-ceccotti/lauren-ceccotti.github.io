@@ -1,0 +1,46 @@
+.skills figure{
+    @include ico-badge(48px, $m: 0px, $is: 42px);
+    &.know{
+        background-image: linear-gradient($turquoise, $purple);
+    }
+    &.tech{
+        background-image: linear-gradient($red, $purple);
+    }
+    &.tools{
+        background-image: linear-gradient($yellow, $turquoise);
+    }
+}
+
+
+nav.links{
+
+    a{
+        @include ico-badge;
+
+        &.linkedin{
+            background-image: linear-gradient($yellow, $turquoise);
+        }
+        &.github{
+            background-image: linear-gradient($turquoise, $yellow);
+        }
+        &.codepen{
+            background-image: linear-gradient($turquoise, $purple);
+        }
+        &.cv{
+            background-image: linear-gradient($purple, $red);
+        }
+        &.behance{
+            background-image: linear-gradient($purple, $turquoise);
+        }
+        &.dribbble{
+            background-image: linear-gradient($yellow, $red);
+        }
+        &.malt{
+            background-image: linear-gradient($red, $yellow);
+        }
+        &:hover{
+            transform: scale(1.1);
+            @include bx-shad;
+        }
+    }
+}

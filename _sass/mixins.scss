@@ -8,3 +8,34 @@
 @mixin bx-shad($a: 0.3) {
     box-shadow: 2px 2px 2px 0 rgba(black, $a);
 }
+
+@mixin ico-badge($s: 46px, $m: 10px, $is: 40px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $s;
+    height: $s;
+    margin: $m;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all, 0.5s;
+    backface-visibility: hidden;
+    @include bx-shad(0);
+
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: calc(#{$s} - 8px);
+        height: calc(#{$s} - 8px);
+        border-radius: 50%;
+        background: #FFF;
+    }
+    img{
+        width: $is;
+        height: $is;
+        position: relative;
+        z-index: 1;
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+}

@@ -11,60 +11,6 @@ nav.links{
     max-width: 500px;
     margin: 60px auto 30px;
 
-
-    a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 46px;
-        height: 46px;
-        margin: 10px;
-        border-radius: 50%;
-        transform: scale(1);
-        transition: all, 0.5s;
-        backface-visibility: hidden;
-        @include bx-shad(0);
-
-        &:before{
-            content: "";
-            display: block;
-            position: absolute;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            background: #FFF;
-        }
-
-        &.linkedin{
-            background-image: linear-gradient($yellow, $turquoise);
-        }
-        &.github{
-            background-image: linear-gradient($turquoise, $yellow);
-        }
-        &.codepen{
-            background-image: linear-gradient($turquoise, $purple);
-        }
-        &.cv{
-            background-image: linear-gradient($purple, red);
-        }
-        &.behance{
-            background-image: linear-gradient($purple, $turquoise);
-        }
-        &.dribbble{
-            background-image: linear-gradient($yellow, $red);
-        }
-        &.malt{
-            background-image: linear-gradient($red, $yellow);
-        }
-        img{
-            width: 40px;
-            height: 40px;
-            position: relative;
-            z-index: 1;
-            -webkit-font-smoothing: subpixel-antialiased;
-        }
-    }
-
     h5{
         position: absolute;
         width: 100%;
@@ -76,9 +22,6 @@ nav.links{
 }
 
 nav.links a:hover{
-    transform: scale(1.1);
-    @include bx-shad;
-
     &+h5{
         opacity: 1;
     }

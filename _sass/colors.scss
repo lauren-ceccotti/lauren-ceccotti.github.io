@@ -14,9 +14,6 @@ body{
         .losange, .fancy-line{
             background: $turquoise;
         }
-        // a:hover, a.current{
-        //     color: darken($turquoise, $dark);
-        // }
 
         section{
             background: $lightest-grey;
@@ -34,18 +31,18 @@ body{
         .losange, .fancy-line{
             background: $purple;
         }
-        // a:hover, a.current{
-        //     color: darken($purple, $dark);
-        // }
+        p a{
+            color: darken($purple, 40);
+            &:hover{
+                color: $link-hover;
+            }
+        }
     }
     &.about{
         background-image: linear-gradient($yellow, $grass, $green, $turquoise);
         .losange, .fancy-line{
             background: $yellow;
         }
-        // a:hover, a.current{
-        //     color: darken($yellow, $dark);
-        // }
         p a{
             color: darken($yellow, 25);
             &:hover{
