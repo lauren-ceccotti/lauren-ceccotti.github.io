@@ -46,7 +46,7 @@ h5{
 }
 
 
-figure figcaption{
+figcaption{
     margin: auto;
     padding: 17px 30px 0;
     text-align: right;
@@ -58,7 +58,10 @@ figure figcaption{
     color: $medium-grey;
     background: $page-color;
 }
-
+.media figcaption{
+    padding-right: 0;
+    padding-left: 0;
+}
 
 p, span, article a, article li{
     font-size: 18px;
