@@ -143,17 +143,7 @@ h4 { font-family: futura-pt, sans-serif; margin: 45px auto 20px; font-size: 27px
 
 h5 { font-size: 14px; letter-spacing: 4px; text-transform: uppercase; color: #333; }
 
-.card h3 { font-family: futura-pt, sans-serif; font-size: 18px; letter-spacing: 4px; line-height: 25px; text-align: left; }
-.card label { font-family: futura-pt, sans-serif; font-size: 13px; letter-spacing: 2px; text-align: right; line-height: normal; }
-
-nav a, .nav a { font-size: 24px; letter-spacing: 2px; }
-
-nav.main-nav a { font-size: 22px; letter-spacing: 3px; }
-
-nav.links h5 { font-family: futura-pt, sans-serif; text-align: center; line-height: 50px; font-size: 20px; letter-spacing: 4px; text-transform: capitalize; }
-
-.cross { font-size: 90px; font-weight: 100; font-family: futura-pt, sans-serif; }
-.cross:after { content: "+"; }
+figure + figcaption { color: #BBB; font-family: futura-pt, sans-serif; font-style: italic; }
 
 p, span, article a, article li { font-size: 18px; letter-spacing: 1px; line-height: 30px; }
 
@@ -161,22 +151,12 @@ p, span, article a, article li { font-size: 18px; letter-spacing: 1px; line-heig
 .content-area li:before { content: "◆"; font-size: 14px; float: left; line-height: 30px; margin-right: 8px; }
 .content-area p { margin: 30px 0; }
 
-.projects figure { background: #74B1ED; }
-.projects figure > img { width: 100%; max-width: 1600px; margin: 60px auto; display: block; }
-
 @media all and (max-width: 1024px) { body h1 { font-size: 60px; }
   body h2 { font-size: 43px; letter-spacing: 3px; line-height: 60px; text-align: center; }
-  body nav a, body .nav a { font-size: 20px; }
-  body nav.main-nav a { font-size: 35px; letter-spacing: 12px; }
   body p, body p a, body span, body article a, body article li { font-size: 16px; letter-spacing: 1px; line-height: 28px; }
   body .content-area li { line-height: 30px; }
   body .content-area li:before { font-size: 14px; line-height: 30px; } }
-@media all and (max-width: 1024px) { body nav.main-nav a { font-size: 30px; letter-spacing: 6px; }
-  body .cross { font-size: 80px; }
-  body .cross:after { content: "+"; } }
-@media all and (max-width: 576px) { body .card h3 { font-size: 14px; letter-spacing: 3px; line-height: 20px; }
-  body .card label { font-size: 12px; letter-spacing: 2px; }
-  body h3.project-desc { margin: 25px auto 70px; font-size: 27px; letter-spacing: 2px; line-height: 50px; }
+@media all and (max-width: 576px) { body h3.project-desc { margin: 25px auto 70px; font-size: 27px; letter-spacing: 2px; line-height: 50px; }
   body h4 { font-size: 22px; line-height: 32px; } }
 body { background-repeat: no-repeat; background-attachment: fixed; }
 body.home { background-image: linear-gradient(to bottom, #994AFC, #64E1E7, #DAF100, #EC4056); }
@@ -244,6 +224,9 @@ body.contact .losange, body.contact .fancy-line { background: #EC4056; }
 
 .fushia-c { color: #B446C4; }
 
+.cross { font-size: 90px; font-weight: 100; font-family: futura-pt, sans-serif; }
+.cross:after { content: "+"; }
+
 .skills figure { display: flex; justify-content: center; align-items: center; width: 48px; height: 48px; margin: 0px; border-radius: 50%; transform: scale(1); transition: all, 0.5s; backface-visibility: hidden; box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0); }
 .skills figure:before { content: ""; display: block; position: absolute; width: calc(48px - 8px); height: calc(48px - 8px); border-radius: 50%; background: #FFF; }
 .skills figure img { width: 42px; height: 42px; position: relative; z-index: 1; -webkit-font-smoothing: subpixel-antialiased; }
@@ -263,6 +246,8 @@ nav.links a.dribbble { background-image: linear-gradient(#DAF100, #EC4056); }
 nav.links a.malt { background-image: linear-gradient(#EC4056, #DAF100); }
 nav.links a:hover { transform: scale(1.1); box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.3); }
 
+@media all and (max-width: 1024px) { body .cross { font-size: 80px; }
+  body .cross:after { content: "+"; } }
 #logo { display: block; position: relative; z-index: 100; width: 40px; cursor: pointer; transform: scale(1); transition: all, 0.5s; backface-visibility: hidden; -webkit-font-smoothing: subpixel-antialiased; }
 #logo .st0, #logo .st1, #logo .st2, #logo .st3 { fill: none; stroke-width: 15; stroke-linejoin: round; stroke-miterlimit: 10; }
 #logo .st0 { stroke: #DAF100; }
@@ -336,8 +321,8 @@ p { margin: auto; }
 
 .card { display: block; position: relative; width: 48%; border-radius: 2px; box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.1); text-align: center; background: #FFF; overflow: hidden; transition: all, 0.5s; }
 .card:after { content: ""; display: block; padding-bottom: 46%; }
-.card h3 { padding-top: 10px; padding-left: 15px; }
-.card label { position: absolute; bottom: 12px; right: 15px; }
+.card h3 { padding-top: 10px; padding-left: 15px; font-family: futura-pt, sans-serif; font-size: 18px; letter-spacing: 4px; line-height: 25px; text-align: left; }
+.card label { position: absolute; bottom: 12px; right: 15px; font-family: futura-pt, sans-serif; font-size: 13px; letter-spacing: 2px; text-align: right; line-height: normal; }
 .card:hover { box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.25); color: #147f84; }
 
 .card-content { position: absolute; width: 100%; height: 100%; }
@@ -353,9 +338,9 @@ p { margin: auto; }
   body .row:nth-child(even) .card .card-content .card-desc, body .row:nth-child(odd) .card .card-content .card-desc { top: 0 !important; left: 40% !important; width: 60% !important; height: 100% !important; }
   body .row:nth-child(even) .card label, body .row:nth-child(odd) .card label { bottom: 20px; right: 25px; } }
 @media all and (max-width: 576px) { body .row:nth-child(even) .card:after, body .row:nth-child(odd) .card:after { padding-bottom: 45% !important; }
-  body .card h3 { padding-top: 2px; padding-left: 5px; }
+  body .card h3 { padding-top: 2px; padding-left: 5px; font-size: 14px; letter-spacing: 3px; line-height: 20px; }
   body .card .card-content .card-desc { padding: 17px 12px; }
-  body .card label { bottom: 13px; right: 15px; } }
+  body .card label { bottom: 13px; right: 15px; font-size: 12px; letter-spacing: 2px; } }
 .prez-card { box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.1); padding: 60px; margin: 0 auto 110px; color: #BBB; }
 .prez-card .prez-top { display: flex; margin-bottom: 70px; }
 .prez-card .prez-top > div, .prez-card .prez-bottom > div { width: 100%; }
@@ -375,6 +360,9 @@ a { transition: color, 0.5s; }
 
 a:hover, a.current { color: #BBB; }
 
+nav a, .nav a { font-size: 24px; letter-spacing: 2px; }
+
+@media all and (max-width: 1024px) { body nav a, body .nav a { font-size: 20px; } }
 .menu-home ul.nav { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .menu-home ul.nav li { position: absolute; }
 .menu-home ul.nav li.projects { top: -4%; left: 78%; }
@@ -387,7 +375,7 @@ a:hover, a.current { color: #BBB; }
 @media all and (max-width: 576px) { body .menu-home { justify-content: space-around; }
   body .menu-home ul.nav { width: auto; padding: 0; padding-left: 10px; } }
 nav.links { position: relative; display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; padding: 10px 0; width: 45%; max-width: 500px; margin: 60px auto 30px; }
-nav.links h5 { position: absolute; width: 100%; top: 100%; color: #BBB; opacity: 0; transition: opacity, 0.5S; }
+nav.links h5 { position: absolute; width: 100%; top: 100%; color: #BBB; opacity: 0; transition: opacity, 0.5S; font-family: futura-pt, sans-serif; text-align: center; line-height: 50px; font-size: 20px; letter-spacing: 4px; text-transform: capitalize; }
 
 nav.links a:hover + h5 { opacity: 1; }
 
@@ -401,11 +389,13 @@ nav.links a:hover + h5 { opacity: 1; }
 .main-nav:after { content: ""; display: block; background: #FFF; position: absolute; top: 24px; width: 70px; height: 70px; border-radius: 70px; }
 .main-nav .nav-items { display: flex; flex-direction: column; justify-content: space-between; align-items: center; margin: -60px 0 20px; padding-top: 80px; height: 0; overflow: hidden; }
 .main-nav li { margin: 25px 0; opacity: 0; }
+.main-nav a { font-size: 22px; letter-spacing: 3px; }
 
 @media all and (max-width: 1024px) { body .main-nav { padding: 25px 0px; width: 95px; }
   body .main-nav:after { top: 10px; }
   body .main-nav .nav-items { justify-content: center; position: fixed; width: 50%; height: 100%; top: 0; bottom: 0; right: 0; left: 0; margin: 0 auto; padding-top: 0; display: none; }
   body .main-nav li { margin: 30px 0; }
+  body .main-nav a { font-size: 30px; letter-spacing: 6px; }
   body .overlay { position: fixed; top: -1300px; right: -1300px; width: 1500px; height: 1500px; border-radius: 1500px; z-index: 98; background: #FFF; box-shadow: -1px 3px 4px 3px rgba(0, 0, 0, 0.1); display: none; } }
 @media all and (max-width: 576px) { body .main-nav { padding: 15px 0px; width: 65px; }
   body .main-nav:after { top: 3px; width: 55px; height: 55px; border-radius: 55px; }
@@ -439,6 +429,9 @@ form input.balloon:invalid + label, form textarea.balloon:invalid + label { colo
   body form input.balloon, body form textarea.balloon { letter-spacing: 2px; font-size: 13px; }
   body form input.balloon + label, body form textarea.balloon + label { letter-spacing: 3px; font-size: 13px; }
   body form input[type=submit] { width: 100%; } }
+.projects figure { background: #74B1ED; }
+.projects figure > img { width: 100%; max-width: 1600px; margin: 60px auto; display: block; }
+
 video { box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1); display: block; }
 
 .media-logbook-scroll { width: 250px; }

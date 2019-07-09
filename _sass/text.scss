@@ -45,56 +45,11 @@ h5{
     color: $main-text;
 }
 
-.card {
-    h3{
-        font-family: futura-pt, sans-serif;
-        font-size: 18px;
-        letter-spacing: 4px;
-        line-height: 25px;
-        text-align: left;
-    }
-    label{
-        font-family: futura-pt, sans-serif;
-        font-size: 13px;
-        letter-spacing: 2px;
-        text-align: right;
-        line-height: normal;
-    }
-}
 
-
-nav, .nav{
-    a{
-        font-size: 24px;
-        letter-spacing: 2px;
-    }
-}
-
-nav.main-nav{
-    a{
-        font-size: 22px;
-        letter-spacing: 3px;
-    }
-}
-
-nav.links{
-    h5{
-        font-family: futura-pt, sans-serif;
-        text-align: center;
-        line-height: 50px;
-        font-size: 20px;
-        letter-spacing: 4px;
-        text-transform: capitalize;
-    }
-}
-
-.cross {
-    font-size: 90px;
-    font-weight: 100;
+figure + figcaption{
+    color: $light-grey;
     font-family: futura-pt, sans-serif;
-    &:after {
-        content: "+";
-    }
+    font-style: italic;
 }
 
 
@@ -107,6 +62,8 @@ p, span, article a, article li{
 article a{
     //attention cards
 }
+
+
 .content-area {
     ul{
         margin: 15px 15px 20px;
@@ -123,18 +80,6 @@ article a{
     }
 }
 
-.projects{
-    figure{
-        background: $blue;
-        & > img{
-            width: 100%;
-            //max-width: 900px;
-            max-width: 1600px;
-            margin: 60px auto;
-            display: block;
-        }
-    }
-}
 
 @media all and (max-width: $tablet){
 
@@ -149,19 +94,6 @@ article a{
             letter-spacing: 3px;
             line-height: 60px;
             text-align: center;
-        }
-
-        nav, .nav{
-            a{
-                font-size: 20px;
-            }
-        }
-
-        nav.main-nav{
-            a{
-                font-size: 35px;
-                letter-spacing: 12px;
-            }
         }
 
         p, p a, span, article a, article li{
@@ -182,43 +114,10 @@ article a{
 }
 
 
-@media all and (max-width: $tablet){
 
-    body{
-
-        nav.main-nav{
-            a{
-                font-size: 30px;
-                letter-spacing: 6px;
-            }
-        }
-
-        .cross {
-            font-size: 80px;
-            &:after {
-                content: "+";
-            }
-        }
-
-    }
-}
 
 @media all and (max-width: $mobile){
-
     body{
-
-        .card {
-            h3{
-                font-size: 14px;
-                letter-spacing: 3px;
-                line-height: 20px;
-            }
-            label{
-                font-size: 12px;
-                letter-spacing: 2px;
-            }
-        }
-
         h3.project-desc{
             margin: 25px auto 70px;
             font-size: 27px;

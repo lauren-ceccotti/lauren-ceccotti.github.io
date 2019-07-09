@@ -1,3 +1,15 @@
+
+
+.cross {
+    font-size: 90px;
+    font-weight: 100;
+    font-family: futura-pt, sans-serif;
+    &:after {
+        content: "+";
+    }
+}
+
+
 .skills figure{
     @include ico-badge(48px, $m: 0px, $is: 42px);
     &.know{
@@ -41,6 +53,18 @@ nav.links{
         &:hover{
             transform: scale(1.1);
             @include bx-shad;
+        }
+    }
+}
+
+
+@media all and (max-width: $tablet){
+    body{
+        .cross {
+            font-size: 80px;
+            &:after {
+                content: "+";
+            }
         }
     }
 }

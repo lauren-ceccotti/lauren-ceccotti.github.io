@@ -18,6 +18,13 @@ nav.links{
         color: $link-hover;
         opacity: 0;
         transition: opacity, 0.5S;
+
+        font-family: futura-pt, sans-serif;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+        letter-spacing: 4px;
+        text-transform: capitalize;
     }
 }
 
@@ -30,6 +37,7 @@ nav.links a:hover{
 .home-content nav.links{
     justify-content: space-between;
 }
+
 
 
 @media all and (max-width: $tablet){
