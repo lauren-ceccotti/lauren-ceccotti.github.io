@@ -2,11 +2,12 @@
 .projects{
     figure{
         background: $blue;
+        margin: 60px auto;
         & > img{
             width: 100%;
             //max-width: 900px;
             max-width: 1600px;
-            margin: 60px auto;
+            margin: auto;
             display: block;
         }
     }
