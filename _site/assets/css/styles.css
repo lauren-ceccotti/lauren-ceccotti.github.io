@@ -431,6 +431,10 @@ form input.balloon:invalid + label, form textarea.balloon:invalid + label { colo
   body form input.balloon, body form textarea.balloon { letter-spacing: 2px; font-size: 13px; }
   body form input.balloon + label, body form textarea.balloon + label { letter-spacing: 3px; font-size: 13px; }
   body form input[type=submit] { width: 100%; } }
+.bx-sh { box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1); }
+
+figure img { display: block; margin: auto; width: auto; max-width: 100%; }
+
 .projects figure { background: #74B1ED; margin: 60px auto; }
 .projects figure > img { width: 100%; max-width: 1600px; margin: auto; display: block; }
 
