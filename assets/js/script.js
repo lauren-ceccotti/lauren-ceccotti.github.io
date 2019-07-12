@@ -91,15 +91,20 @@ var tl_toggleMenu = new TimelineMax({paused:true});
     .staggerTo(".main-nav li", 0.5, {opacity: 1}, 0.2, 0.1)
     //staggerTo(el, transition d {prop:val} d-inter-el, delay-before-stag)
 
-   $(".desktop #logo").mouseenter(function(){
-       tl_toggleMenu.play();
-       $(".main-nav").removeClass('folded');
-   });
-   $(".desktop .main-nav").mouseleave(function(){
-       tl_toggleMenu.reverse();
-       $(this).addClass('folded');
-   });
 
+
+function menuDesktop(){
+    if(modeMobile == false){
+       $(".desktop #logo").mouseenter(function(){
+           tl_toggleMenu.play();
+           $(".main-nav").removeClass('folded');
+       });
+       $(".desktop .main-nav").mouseleave(function(){
+           tl_toggleMenu.reverse();
+           $(this).addClass('folded');
+       });
+    }
+}
 
 
    // quit page anim
@@ -134,20 +139,22 @@ var tl_tabletMenu = new TimelineMax({paused:true});
   .staggerTo(".main-nav li", 0.5, {opacity: 1}, 0.2, 0.5)
 
 
+function menuTablet(){
+    if(modeMobile){
 
+        $(".tablet #logo").click(function(){
+            tl_tabletMenu.duration(1);
+            tl_tabletMenu.play();
+            $(".main-nav").removeClass('folded');
+        });
 
-
-    $(".tablet #logo").click(function(){
-        tl_tabletMenu.duration(1);
-        tl_tabletMenu.play();
-        $(".main-nav").removeClass('folded');
-    });
-
-    $(".tablet .cross").click(function(){
-        tl_tabletMenu.duration(0.6);
-        tl_tabletMenu.reverse();
-      $(".main-nav").addClass('folded');
-    });
+        $(".tablet .cross").click(function(){
+            tl_tabletMenu.duration(0.6);
+            tl_tabletMenu.reverse();
+          $(".main-nav").addClass('folded');
+        });
+    }
+}
 
 
 ////// QUIT page function FAKE AJAX
@@ -208,8 +215,12 @@ function floatLabel(inputType){
 floatLabel(input);
 
 
+menuDesktop();
+menuTablet();
 
 
 $(window).resize(function () {
 	detectScreensize();
+    // menuDesktop();
+    // menuTablet();
 });
