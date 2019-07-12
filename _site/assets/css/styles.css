@@ -305,7 +305,7 @@ p { margin: auto; }
   body .article { width: calc(100% - 30px *2 ); } }
 .card-grid { margin: 60px auto; max-width: 950px; }
 
-.row { overflow: hidden; clear: both; position: relative; padding: 20px; margin-top: calc( 4% - 40px); }
+.row { overflow: hidden; clear: both; position: relative; padding: 20px; margin-top: calc( 4% - 40px); height: 357px; }
 
 .row:nth-child(odd) .card { float: right; }
 .row:nth-child(odd) .card:last-child { position: absolute; right: 20px; bottom: 20px; width: calc( 48% - 20px); }
@@ -324,7 +324,7 @@ p { margin: auto; }
 .card { display: block; position: relative; width: 48%; border-radius: 2px; box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.1); text-align: center; background: #FFF; overflow: hidden; transition: all, 0.5s; }
 .card:after { content: ""; display: block; padding-bottom: 46%; }
 .card h3 { padding-top: 10px; padding-left: 15px; font-family: futura-pt, sans-serif; font-size: 18px; letter-spacing: 4px; line-height: 25px; text-align: left; }
-.card label { position: absolute; bottom: 12px; right: 15px; font-family: futura-pt, sans-serif; font-size: 13px; letter-spacing: 2px; text-align: right; line-height: normal; }
+.card label { position: absolute; bottom: 12px; right: 15px; font-family: futura-pt, sans-serif; font-size: 13px; letter-spacing: 2px; text-align: right; line-height: 14px; padding-left: 10px; }
 .card:hover { box-shadow: 3px 3px 6px 1px rgba(0, 0, 0, 0.25); color: #147f84; }
 
 .card-content { position: absolute; width: 100%; height: 100%; }
@@ -333,7 +333,7 @@ p { margin: auto; }
 .card-content .image-filter { z-index: 2; background: rgba(100, 225, 231, 0.25); }
 .card-content .card-desc { position: absolute; top: 0; left: 40%; width: 60%; height: 100%; padding: 20px; }
 
-@media all and (max-width: 850px) { body .row:nth-child(even), body .row:nth-child(odd) { padding: 0; overflow: visible; margin: 0 auto; }
+@media all and (max-width: 850px) { body .row:nth-child(even), body .row:nth-child(odd) { padding: 0; overflow: visible; margin: 0 auto; height: auto; }
   body .row:nth-child(even) .card, body .row:nth-child(odd) .card { float: none !important; position: relative !important; width: 100% !important; top: auto !important; bottom: auto !important; left: auto !important; right: auto !important; margin-bottom: 40px; }
   body .row:nth-child(even) .card:after, body .row:nth-child(odd) .card:after { padding-bottom: 35% !important; }
   body .row:nth-child(even) .card .card-content img, body .row:nth-child(even) .card .card-content .image-filter, body .row:nth-child(odd) .card .card-content img, body .row:nth-child(odd) .card .card-content .image-filter { width: 40% !important; height: 100% !important; }
