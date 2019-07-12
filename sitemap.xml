@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+ <url>
+  <loc>https://lauren-ceccotti.github.io/</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+ </url>
+ <url>
+  <loc>https://lauren-ceccotti.github.io/projects.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+ </url>
+ <url>
+  <loc>https://lauren-ceccotti.github.io/skills.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+ </url>
+ <url>
+  <loc>https://lauren-ceccotti.github.io/about.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+ </url>
+ <url>
+  <loc>https://lauren-ceccotti.github.io/contact.html</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+ </url>
+ <url>
+  <loc>https://lauren-ceccotti.github.io/assets/download/cv.pdf</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.9</priority>
+ </url>
+</urlset>

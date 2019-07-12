@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://lauren-ceccotti.github.io/sitemap.xml
