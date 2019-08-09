@@ -20,44 +20,7 @@ description: Selected works on user experiences, user interfaces, and interactio
 <section>
     <article class="">
 
-        <div class="card-grid">
-
-            {% assign sorted_projects = site.projects | sort:"weight" %}
-
-            {% assign j = 1  %}
-
-                {% for project in sorted_projects %}
-
-                    {% if j == 1 %}
-                    <div class="row">
-                    {% endif %}
-                        <a class="card" href="{{ project.url }}">
-                            <div class="card-content">
-                                <div class="image-filter"></div>
-                                <img src="{{site.data.paths.pj-pic}}{{ project.ref }}/{{ project.image }}" alt="">
-                                <div class="card-desc">
-                                    <h3>{{ project.title }}</h3>
-                                    <label>{{ project.type }}</label>
-                                    <!-- <p>{{ project.content | markdownify | truncate: 20 }}</p> -->
-                                </div>
-                            </div>
-                        </a>
-
-                    {% if j == 3 %}
-                        </div> <!-- close row full -->
-                        {% assign j = 0 %}
-                    {% endif %}
-
-                    {% assign j = j | plus:1 %}
-                {% endfor %}
-
-                {% if j > 1 %}
-                    </div> <!-- close row < 3 -->
-                {% endif %}
-        </div> <!-- close grid -->
-
-
-
+        {% include card-grid.html %}
 
     </article>
 </section>

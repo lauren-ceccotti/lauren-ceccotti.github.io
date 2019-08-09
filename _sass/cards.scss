@@ -1,4 +1,9 @@
 
+////  ATTENTION MOBILE FIRST
+////  0 to 809
+
+
+
 .card-grid {
     margin: 60px auto;
     max-width: 950px;
@@ -7,60 +12,27 @@
 }
 
 
-.row{
-    overflow: hidden;
-    clear: both;
-    position: relative;
-    padding: $card-padding;
-    margin-top: calc( 4% - #{$card-padding * 2});
-    height: 357px;
-}
 
 
-.row:nth-child(odd){
-    //small-card
-    .card{
-        float: right;
-    }
-    //last small-card
-    .card:last-child{
-        position: absolute;
-        right: $card-padding;
-        bottom: $card-padding;
-        width: calc( 48% - #{$card-padding});
-    }
-    //big-card
-    .card:first-child{
-        float: left;
-        @include big-card;
-    }
-}
+.card{
 
 
-.row:nth-child(even){
-    //small-card
-    .card{
-        float: left;
-    }
-    //last small-card
-    .card:last-child{
-        position: absolute;
-        left: $card-padding;
-        bottom: $card-padding;
-        width: calc( 48% - #{$card-padding});
-    }
-    //big-card
-    .card:first-child{
-        float: right;
-        @include big-card;
-    }
+    // &:first-child{
+    //     flex-shrink: 0;
+    // }
+    // &:last-child:not(.third){
+    //     flex-shrink: 0;
+    //     border: 2px solid coral;
+    // }
 }
 
 
 
-//small-card > all cards
 .card {
-    @include small-card;
+    @include card;
+    height: 357px;
+    width: 100%;
+    margin-bottom: 30px;
 
     h3{
         padding-top: 10px;
@@ -88,84 +60,29 @@
     }
 }
 .card-content {
-    @include small-card-content;
+    @include card-content;
 }
 
 
-@media all and (max-width: $small-tablet){
+
+@media all and (min-width: 810px){
 
     body{
-
-        .row:nth-child(even), .row:nth-child(odd){
-            padding: 0;
-            overflow: visible;
-            margin: 0 auto;
-            height: auto;
+        .card-grid{
+            .row{
+                // padding: $card-padding;
+                // margin-top: calc( 4% - #{$card-padding * 2});
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
             .card{
-                float: none!important;
-                position: relative!important;
-                width: 100%!important;
-                top: auto!important;
-                bottom: auto!important;
-                left: auto!important;
-                right: auto!important;
-                margin-bottom: 40px;
-
-                &:after {
-                    padding-bottom: 35%!important;
-                }
-                .card-content{
-                    img, .image-filter{
-                        width: 40%!important;
-                        height: 100%!important;
-                    }
-                    .card-desc{
-                        top: 0!important;
-                        left: 40%!important;
-                        width: 60%!important;
-                        height: 100%!important;
-                    }
-                }
-                label{
-                    bottom: 20px;
-                    right: 25px;
+                &:nth-child(2), &:nth-child(3){
+                    width: 48%;
                 }
             }
-
-        }
-    }
-}
-
-
-
-
-@media all and (max-width: $mobile){
-
-    body{
-
-        .row:nth-child(even) .card:after,
-        .row:nth-child(odd) .card:after{
-            padding-bottom: 45%!important;
-        }
-
-        .card{
-            h3{
-                padding-top: 2px;
-                padding-left: 5px;
-                font-size: 14px;
-                letter-spacing: 3px;
-                line-height: 20px;
-            }
-            .card-content{
-                .card-desc{
-                    padding: 17px 12px;
-                }
-            }
-            label{
-                bottom: 13px;
-                right: 15px;
-                font-size: 12px;
-                letter-spacing: 2px;
+            a.card.small-card{
+                width: 48%;
             }
         }
     }

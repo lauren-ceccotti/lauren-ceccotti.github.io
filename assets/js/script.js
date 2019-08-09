@@ -215,6 +215,25 @@ function floatLabel(inputType){
 floatLabel(input);
 
 
+
+
+
+function niceProjects(){
+    if($(".card-grid .row:last-child .card:last-child:not(.third)")){
+
+        $(".card-grid .row:last-child .card:last-child:not(.third)").prev().addClass('small-card')
+    }
+}
+niceProjects();
+
+
+
+
+
+
+
+
+
 menuDesktop();
 menuTablet();
 
