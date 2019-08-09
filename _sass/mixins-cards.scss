@@ -37,6 +37,7 @@
     .image-filter{
         z-index: 2;
         background: rgba($turquoise, 0.25);
+        transition: background, 0.5s;
     }
     .card-desc{
         position: absolute;

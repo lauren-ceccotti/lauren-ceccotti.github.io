@@ -3,30 +3,10 @@
 ////  0 to 809
 
 
-
 .card-grid {
     margin: 60px auto;
     max-width: 950px;
-    // margin-left: -#{$card-padding};
-    // width: calc( 100% + #{$card-padding} * 2);
 }
-
-
-
-
-.card{
-
-
-    // &:first-child{
-    //     flex-shrink: 0;
-    // }
-    // &:last-child:not(.third){
-    //     flex-shrink: 0;
-    //     border: 2px solid coral;
-    // }
-}
-
-
 
 .card {
     @include card;
@@ -57,6 +37,9 @@
     &:hover{
         box-shadow: 3px 3px 6px 1px rgba(black, 0.25);
         color: darken($turquoise, 35);
+        .image-filter{
+            background: rgba($turquoise, 0.1);
+        }
     }
 }
 .card-content {
