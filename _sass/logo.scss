@@ -1,5 +1,5 @@
 
-#logo{
+.logo{
     display: block;
     position: relative;
     z-index: 100;
@@ -36,12 +36,12 @@
 
 
 
-.logo{
+.logo-img{
     display: block;
 }
 
 @media all and (max-width: $mobile){
-    #logo{
+    .logo{
         width: 30px;
     }
 }

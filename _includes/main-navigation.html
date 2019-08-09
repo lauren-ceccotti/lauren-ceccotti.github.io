@@ -1,4 +1,4 @@
-<nav class="main-nav folded">
+<nav class="main-nav nav-mobile folded">
     <div class="cross"></div>
     {% include logo.html %}
     <ul class="nav-items">
@@ -12,3 +12,17 @@
     </ul>
 </nav>
 <div class="overlay"></div>
+
+
+<nav class="main-nav nav-desktop folded">
+    {% include logo.html %}
+    <ul class="nav-items">
+        {% for item in site.data.main-navigation %}
+        <li>
+            <a href="{{ item.link }}" data-name="{{ item.name }}" class="{{ item.name }} {% if page.url == item.link %}current{% endif %} site-link" >
+                {{ item.name | capitalize }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
