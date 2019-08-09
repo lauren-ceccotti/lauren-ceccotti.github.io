@@ -97,6 +97,10 @@
         .nav-mobile{
             padding: 25px 0px;
             width: 95px;
+            .logo{
+                top: -2px;
+                left: 0px;
+            }
             &:after{
                 top: 10px;
             }
@@ -135,6 +139,9 @@
             top: $border;
             right: $border;
             z-index: 99;
+            .logo{
+                width: 40px;
+            }
             &:after{
                 content: "";
                 display: block;
