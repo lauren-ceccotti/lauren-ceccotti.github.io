@@ -24,7 +24,7 @@ figure{
         & > img{
             width: 100%;
             //max-width: 900px;
-            max-width: 1600px;
+            max-width: $max-image-w;
             margin: auto;
             display: block;
         }
